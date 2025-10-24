@@ -1996,8 +1996,8 @@ export default function WoodsSite() {
 
     // Global search: ignore activeCat once user types
     if (q) {
-      return MENU_ITEMS.filter((i) => {
-        const txt = tItem(i.id);
+      return MENU_ITEMS.filter((i: MenuItem) => {
+        const txt: ItemText = tItem(i.id);
         const haystack = (
           txt.name +
           " " +
@@ -2005,8 +2005,9 @@ export default function WoodsSite() {
           " " +
           (tSubcat(i.subcategory) || "")
         ).toLowerCase();
-        return haystack.includes(q);
+        return haystack.includes(q.toLowerCase());
       });
+      
     }
 
     // No search: respect the selected category (or "all")
@@ -2543,13 +2544,13 @@ function CategoryChip({
     </button>
   );
 }
-
+import { ComponentType, SVGProps } from "react";
 function DrawerLink({
   icon: Icon,
   label,
   onClick,
 }: {
-  icon: any;
+  icon: ComponentType<SVGProps<SVGSVGElement>>;
   label: string;
   onClick?: () => void;
 }) {
