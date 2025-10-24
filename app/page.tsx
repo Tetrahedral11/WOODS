@@ -20,39 +20,6 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
-export default function HomePage() {
-  // --- Scroll optimization to prevent Chrome crash ---
-  useEffect(() => {
-    let ticking = false;
-
-    const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          // Replace this with your actual scroll logic or animations
-          console.log("Scrolling..."); // Example
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-  // -----------------------------------------------------
-
-  return (
-    <div className="h-[200vh]">
-      {/* Example long page to allow scrolling */}
-      <h1>Scroll Test Page</h1>
-    </div>
-  );
-}
-
-
 /* ============================================================================
    1) Types
    ========================================================================== */
@@ -239,40 +206,46 @@ export type MenuItem = {
 /* ============================================================================
    2) Language meta + UI strings (brand, actions, headers)
    ========================================================================== */
-const UI: Record<LangKey, { rtl?: boolean; brand: string; chooseLanguage:  string; menu:  string; search: string; storyTitle: string; story: string; all: string; itemsCount: (n: number) => string; priceMAD: (v: number) => string; }> = {
+const UI: Record<LangKey, { rtl?: boolean; brand: string; chooseLanguage:  string; menu:  string; search: string; clearSearch?: string; storyTitle: string; story: string; all: string; itemsCount: (n: number) => string; priceMAD: (v: number) => string; }> = {
   fr: {
     brand: "WOODS",
     chooseLanguage: "Choisissez votre langue",
     menu: "Notre Carte",
     search: "Rechercher des plats, ingrédients…",
+    clearSearch: "Effacer la recherche", 
     storyTitle: "Notre histoire",
     story: "Chez WOODS, nous mêlons la chaleur marocaine à un esprit contemporain. Des produits de saison, locaux et respectés.",
     all: "Tout",
     itemsCount: (n) => `${n}`,
     priceMAD: (v) => `${v} DH`,
   },
+  
   en: {
     brand: "WOODS",
     chooseLanguage: "Choose your language",
     menu: "Our Menu",
     search: "Search dishes, ingredients…",
+    clearSearch: "Clear search", 
     storyTitle: "Our Story",
     story: "At WOODS, we blend Moroccan warmth with modern craft. Seasonal, local produce handled with care.",
     all: "All",
     itemsCount: (n) => `${n}`,
     priceMAD: (v) => `${v} MAD`,
   },
+  
   nl: {
     brand: "WOODS",
     chooseLanguage: "Kies je taal",
     menu: "Onze kaart",
     search: "Zoek gerechten of ingrediënten…",
+    clearSearch: "Zoekopdracht wissen", 
     storyTitle: "Ons verhaal",
     story: "Bij WOODS combineren we Marokkaanse warmte met moderne ambacht. Seizoensgebonden en lokaal, met respect bereid.",
     all: "Alles",
     itemsCount: (n) => `${n}`,
     priceMAD: (v) => `${v} MAD`,
   },
+  
 };
 
 /* ============================================================================
@@ -1994,6 +1967,7 @@ function useI18n(initial?: LangKey) {
   return { lang, setLang, dict: reg.ui, tItem, tCategory, tSubcat };
 }
 
+
 /* ============================================================================
    9) Main component
    ========================================================================== */
@@ -2267,14 +2241,14 @@ export default function WoodsSite() {
               className="w-full h-12 pl-9 pr-10 rounded-2xl border border-white/20 bg-white/10 placeholder-white/40 outline-none focus:ring-2 focus:ring-seafoam"
             />
             {query && (
-              <button
-                type="button"
-                aria-label={dict.clearSearch ?? "Clear search"}
-                onClick={() => setQuery("")}
-                className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full p-1 hover:bg-white/20 focus:outline-none"
-              >
-                <X className="w-4 h-4 text-white/60" />
-              </button>
+         <button
+         type="button"
+         aria-label={dict.clearSearch ?? "Clear search"}
+         onClick={() => setQuery("")}
+         className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full p-1 hover:bg-white/20 focus:outline-none"
+       >
+         <X className="w-4 h-4 text-white/60" />
+       </button>
             )}
           </div>
         </div>
