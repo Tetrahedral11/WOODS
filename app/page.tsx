@@ -41,157 +41,10 @@ type CategoryId =
   | "sweets_crepes_gaufres_pancakes"
   | "desserts";
 
-// 2.x) Category → image path (public assets)
-const CATEGORY_IMAGES: Record<CategoryId, string> = {
-  drinks: "/images/categories/matcha.jpg",       // use matcha.png for drinks
-  breakfast: "/images/categories/toast.jpg",     // toast.jpg for breakfast
-  entrees: "/images/categories/salmon.jpg",      // salmon.jpg for starters/entrées
-  plats: "/images/categories/bun.jpg",           // bun.jpg for mains
-  pastas: "/images/categories/pasta.jpg",        // pasta.jpg for pastas
-  pizzas: "/images/categories/crepe.jpg",        // crepe.jpg as placeholder
-  aperitifs: "/images/categories/frap.jpg",      // frap.jpg (frappé style drink) for aperitifs
-  burgers: "/images/categories/burger.jpg",      // burger.jpg for burgers
-  crepes_savory: "/images/categories/crepe.jpg", // crepe.jpg for savory crêpes
-  tacos: "/images/categories/bsandwich.jpg",     // bsandwich.jpg as placeholder
-  sandwiches: "/images/categories/sandwich.jpg", // sandwich.jpg for sandwiches
-  panini: "/images/categories/bsandwich.jpg",    // bsandwich.jpg for panini
-  sweets_crepes_gaufres_pancakes: "/images/categories/pancake.jpg", // pancake.jpg
-  desserts: "/images/categories/dessert.jpg",    // dessert.jpg for desserts
-};
 
-// Optional: Subcategory heroes (use exact raw subcategory keys you already use)
-// Put this where SUBCAT_HERO is defined
-const SUBCAT_HERO: Partial<Record<CategoryId, Record<string, string>>> = {
-  // ——— DRINKS
-  drinks: {
-    "Matcha": "/images/categories/matcha.jpg",                 // ← your file is .png
-    "Café & Spécialités": "/images/categories/coffe-special.jpg",
-    "Rafraîchissants": "/images/categories/ref.jpg",
-    "Smoothies": "/images/categories/smoothie.jpg",
-    "Redbull Crémeux": "/images/categories/creamy.jpg",
-    "Boissons Fraîches": "/images/categories/soda.jpg", // note capital F to match data
-    "Mojitos": "/images/categories/cock.jpg",
-    "Thés glacés": "/images/categories/iced.jpg",
-    "Cocktails sans alcool": "/images/categories/juicy.jpg",
-    "Jus": "/images/categories/juice.jpg",
-    "Jus pressés": "/images/categories/pressed.webp",
-    "Nos Thé": "/images/categories/tea.jpg",
-    "Boissons Chaudes": "/images/categories/black.jpg",
-  },
 
-  // ——— BREAKFAST
-  breakfast: {
-    "Espagnol": "/images/categories/spanish .webp",
-    "Marocaine": "/images/categories/rghifa.jpg",
-    "Bols": "/images/categories/boowl.jpg",
-    "Tartines": "/images/categories/toast.jpg",
-    "Petits pains briochés": "/images/categories/bun.jpg",
-    "Sandwichs": "/images/categories/bsandwich.jpg",
-    "Œufs": "/images/categories/egg.jpg",
-    "À la Carte": "/images/categories/alacarte.jpg",
-    "Toast Hollandais": "/images/categories/holland.jpg",
-    "Formules Enfants": "/images/categories/pancake.webp",
-    "Crêpes": "/images/categories/crepe.jpg",
-  },
 
-  // ——— ENTRÉES
-  entrees: {
-    "Entrées Froides": "/images/categories/salad.webp",
-    "Entrées Chaudes": "/images/categories/soup.jpg",
-    "À Base Poisson": "/images/categories/salmon.webp",
-    "À Base Viande & Poulet": "/images/categories/burger.jpg",
-    "Marocains": "/images/categories/tagine.webp",
-  },
 
-  // ——— MAINS (PLATS)
-  plats: {
-    "À Base Poisson": "/images/categories/salmon.webp",
-    "À Base Viande & Poulet": "/images/categories/steak.jpg",
-    "Marocains": "/images/categories/tagine.webp",
-  },
-
-  // ——— PÂTES (PASTAS)
-  pastas: {
-    "Pâtes": "/images/categories/pasta.webp",
-  },
-
-  // ——— PIZZAS
-  pizzas: {
-    "Pizzas": "/images/categories/pizza.webp",
-    "pizzas": "/images/categories/pizza.webp", // one item uses lowercase; map both to be safe
-  },
-
-  // ——— APÉRITIFS + TEX-MEX
-  aperitifs: {
-    "Apéritifs": "/images/categories/mozza.jpg",
-    "Tex Mex": "/images/categories/mozza.jpg",
-  },
-
-  // ——— TACOS
-  tacos: {
-    "Tacos": "/images/categories/tacos.webp",
-  },
-
-  // ——— SANDWICHES & PANINI
-  sandwiches: {
-    "Sandwiches": "/images/categories/sandwich.jpg",
-  },
-  panini: {
-    "Panini": "/images/categories/panini.webp",
-  },
-
-  // ——— BURGERS
-  burgers: {
-    "Burgers": "/images/categories/burger.jpg",
-  },
-
-  // ——— CRÊPES SALÉES
-  crepes_savory: {
-    "Crêpes Salées": "/images/categories/crepe.jpg",
-  },
-
-  // ——— CRÊPES / GAUFRES / PANCAKES (SUCRÉS)
-  sweets_crepes_gaufres_pancakes: {
-    "Crêpes & Gauffres": "/images/categories/waffle.webp", // keep “Gauffres” to match your data
-    "Pancake": "/images/categories/waffle.webp",
-  },
-
-  // ——— DESSERTS & ICE CREAM
-  desserts: {
-    "Desserts": "/images/categories/dessert.jpg",
-    "Frappuccino": "/images/categories/frap.jpg",
-    "freakshake": "/images/categories/freakshake.jpg",  // lowercase in data
-    "Coupes glacées": "/images/categories/icea.jpg",
-    "Composez Votre Glace": "/images/categories/icea.jpg",
-  },
-};
-
-// Pick a hero for a subcategory with fallbacks
-function subcatHeroImage(
-  catId: CategoryId,
-  rawSubcat: string,
-  items: MenuItem[] = []
-): string {
-  // 1) explicit mapping
-  const mapped = SUBCAT_HERO[catId]?.[rawSubcat];
-  if (mapped) return mapped;
-
-  // 2) item tagged as hero
-  const tagged = items.find((i) => i.tags?.includes("hero") && i.image);
-  if (tagged?.image) return tagged.image;
-
-  // 3) any item with image
-  const anyWithImage = items.find((i) => i.image);
-  if (anyWithImage?.image) return anyWithImage.image;
-
-  // 4) fallback to category banner
-  return catImage(catId);
-}
-
-// Helper with a safe fallback image if a file is missing
-function catImage(id: CategoryId) {
-  return CATEGORY_IMAGES[id] ?? "/images/categories/placeholder.webp";
-}
 
 
 export type MenuItem = {
@@ -199,7 +52,6 @@ export type MenuItem = {
   price: number | null; // some prices TBD in your data
   category: CategoryId;
   subcategory?: string; // language-neutral slug-like label
-  image?: string;
   tags?: string[];
 };
 
@@ -1979,16 +1831,7 @@ export default function WoodsSite() {
   const [activeCat, setActiveCat] = useState<string>("all");
   const showAllView = activeCat === "all" || query.trim().length > 0;
 
-  // --- safe local helpers to avoid undefined refs ---
-  function heroFromItems(items: MenuItem[] = []) {
-    // pick first item.image if present, else a neutral placeholder
-    const img = items.find((i) => (i as any).image)?.image as string | undefined;
-    return img || "";
-  }
-  function heroForCategory(cat: CategoryId, items: MenuItem[] = []) {
-    // currently same strategy; you can customize per category later
-    return heroFromItems(items);
-  }
+ 
   // ---------------------------------------------------
 
   const filteredItems = useMemo(() => {
