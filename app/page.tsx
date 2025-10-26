@@ -285,732 +285,725 @@ const SUB_LABELS: Record<LangKey, Record<string, string>> = {
 type ItemText = { name: string; desc?: string };
 
 type ItemsTextPack = Record<string, ItemText>;
-
+/** FRENCH culinary translations */
 const ITEMS_FR: ItemsTextPack = {
   // ——— Drinks (Matcha)
-"matcha-latte": { name: "Matcha Latte / Glacé", desc: "Thé matcha, lait au choix" },
-"matcha-coco": { name: "Matcha Coco", desc: "Matcha, lait de coco" },
-"matcha-pink-foam": { name: "Matcha Mousse Rose", desc: "Matcha, mousse sucrée rose" },
-"matcha-fraise": { name: "Matcha Fraise", desc: "Matcha, fraise" },
-"matcha-mangue": { name: "Matcha Mangue", desc: "Matcha, mangue" },
+  "matcha-latte": { name: "Matcha Latte / Glacé", desc: "Matcha avec lait (Chaud/Froid)" },
+  "matcha-coco": { name: "Matcha Coco", desc: "Eau de coco avec mousse de matcha" },
+  "matcha-pink-foam": { name: "Matcha Mousse Rose", desc: "Matcha surmonté de mousse à la fraise" },
+  "matcha-fraise": { name: "Matcha Fraise", desc: "Matcha avec purée de fraise" },
+  "matcha-mangue": { name: "Matcha Mangue", desc: "Matcha avec purée de mangue" },
+  "milk-options": { name: "Options de Lait", desc: "Lait d'avoine ou de coco" },
 
-// ——— Drinks (Café & Spécialités)
-"coffee-coco-latte": { name: "Latte Coco", desc: "Expresso, lait de coco" },
-"coffee-creme-brulee-latte": { name: "Latte Crème Brûlée", desc: "Latte sucré, caramel croquant" },
-"coffee-spanish-latte": { name: "Latte Espagnol", desc: "Latte sucré façon espagnole" },
-"coffee-saffron-latte": { name: "Latte Safran", desc: "Infusion de safran, latte" },
+  // ——— Drinks (Café & Spécialités)
+  "coffee-coco-latte": { name: "Latte Coco", desc: "Eau de coco avec mousse de café" },
+  "coffee-creme-brulee-latte": { name: "Latte Crème Brûlée", desc: "Café glacé surmonté de crème brûlée" },
+  "coffee-spanish-latte": { name: "Latte Espagnol", desc: "Lait concentré avec shot d'expresso" },
+  "coffee-saffron-latte": { name: "Latte Safran", desc: "Safran avec lait de curcuma et shot d'expresso" },
+  "milk-options1": { name: "Options de Lait", desc: "Lait d'avoine ou de coco" },
+  
+  // ——— Drinks (Rafraîchissants)
+  "refresher-hibiscus": { name: "Hibiscus", desc: "Hibiscus infusé maison" },
+  "refresher-hibiscus-peche": { name: "Hibiscus Pêche", desc: "Thé d'hibiscus avec finition pêche" },
+  "refresher-tropical-ginger": { name: "Gingembre Tropical", desc: "Mangue et gingembre en fusion épicée" },
+  "refresher-watermelon-fizz": { name: "Fizz Pastèque", desc: "Pastèque mélangée avec soda pétillant" },
 
-// ——— Drinks (Rafraîchissants)
-"refresher-hibiscus": { name: "Hibiscus", desc: "Infusion d’hibiscus glacée" },
-"refresher-hibiscus-peche": { name: "Hibiscus Pêche", desc: "Hibiscus, pêche" },
-"refresher-tropical-ginger": { name: "Gingembre Tropical", desc: "Gingembre, fruits exotiques" },
-"refresher-watermelon-fizz": { name: "Fizz Pastèque", desc: "Pastèque, pétillant" },
+  // ——— Drinks (Smoothies)
+  "smoothie-multivitamine": { name: "Multivitamines", desc: "Orange, ananas, kiwi et mangue" },
+  "smoothie-california-dream": { name: "California Dream", desc: "Orange, fraise, banane, kiwi et yaourt" },
+  "smoothie-jack-special": { name: "Jack Spécial", desc: "Fraise, ananas et citron" },
+  "smoothie-coco-mango": { name: "Coco Mangue", desc: "Mangue, banane et lait de coco" },
+  "smoothie-bananasa": { name: "Bananasa", desc: "Banane, ananas, citron et sirop de menthe" },
 
-// ——— Drinks (Smoothies)
-"smoothie-multivitamine": { name: "Multivitamines", desc: "Mélange de fruits variés" },
-"smoothie-california-dream": { name: "California Dream", desc: "Fruits tropicaux" },
-"smoothie-jack-special": { name: "Jack Spécial", desc: "Signature maison" },
-"smoothie-coco-mango": { name: "Coco Mangue", desc: "Noix de coco, mangue" },
-"smoothie-bananasa": { name: "Bananasa", desc: "Banane, lait au choix" },
+  // ——— Drinks (Redbull Crémeux)
+  "creamy-redbull-blueberry": { name: "Redbull Crémeux Myrtille", desc: "Myrtille coco avec crème épaisse" },
+  "creamy-redbull-strawberry": { name: "Redbull Crémeux Fraise", desc: "Fraise avec crème épaisse" },
+  "creamy-redbull-peach": { name: "Redbull Crémeux Pêche", desc: "Pêche avec crème épaisse" },
 
-// ——— Drinks (Redbull Crémeux)
-"creamy-redbull-blueberry": { name: "Redbull Crémeux Myrtille", desc: "Boisson énergisante, crème, myrtille" },
-"creamy-redbull-strawberry": { name: "Redbull Crémeux Fraise", desc: "Boisson énergisante, crème, fraise" },
-"creamy-redbull-peach": { name: "Redbull Crémeux Pêche", desc: "Boisson énergisante, crème, pêche" },
+  // ——— Drinks (Mojitos sans alcool)
+  "mojito-green": { name: "Mojito Vert", desc: "" },
+  "mojito-strawberry": { name: "Mojito Fraise", desc: "" },
+  "mojito-passion": { name: "Mojito Passion", desc: "" },
+  "mojito-redbull": { name: "Mojito Redbull", desc: "" },
+  "mojito-strawberry-bull": { name: "Mojito Bull Fraise", desc: "" },
+  "mojito-black": { name: "Mojito Noir", desc: "" },
 
+  // ——— Drinks (Thés glacés)
+  "icedtea-raspberry": { name: "Thé Glacé Framboise", desc: "Infusion froide de framboise" },
+  "icedtea-lemon": { name: "Thé Glacé Citron", desc: "Infusion froide de citron" },
 
-// ——— Drinks (Mojitos sans alcool)
-"mojito-green": { name: "Mojito Vert", desc: "Citron vert, menthe, pétillant" },
-"mojito-strawberry": { name: "Mojito Fraise", desc: "Fraise, citron vert, menthe" },
-"mojito-passion": { name: "Mojito Passion", desc: "Fruit de la passion, menthe" },
-"mojito-redbull": { name: "Mojito Redbull", desc: "Red Bull, citron vert, menthe" },
-"mojito-strawberry-bull": { name: "Mojito Bull Fraise", desc: "Red Bull, fraise, menthe" },
-"mojito-black": { name: "Mojito Noir", desc: "Cassonade foncée, menthe" },
+  // ——— Drinks (Cocktails sans alcool)
+  "mocktail-florida": { name: "Florida", desc: "" },
+  "mocktail-bora-bora": { name: "Bora Bora", desc: "" },
+  "mocktail-pinacolada": { name: "Piñacolada", desc: "" },
+  "mocktail-ocean-11": { name: "Ocean 11", desc: "" },
 
-// ——— Drinks (Thés glacés)
-"icedtea-raspberry": { name: "Thé Glacé Framboise", desc: "Infusion froide framboise" },
-"icedtea-lemon": { name: "Thé Glacé Citron", desc: "Infusion froide citron" },
+  // ——— Drinks (Jus)
+  "juice-orange": { name: "Jus d'Orange", desc: "" },
+  "juice-lemon": { name: "Jus de Citron", desc: "" },
+  "juice-lemon-mint": { name: "Citron & Menthe", desc: "" },
+  "juice-carrot": { name: "Jus de Carotte", desc: "" },
+  "juice-banana": { name: "Jus de Banane", desc: "" },
+  "juice-strawberry": { name: "Jus de Fraise", desc: "" },
+  "juice-apple": { name: "Jus de Pomme", desc: "" },
+  "juice-peach": { name: "Jus de Pêche", desc: "" },
+  "juice-avocado": { name: "Jus d'Avocat", desc: "" },
+  "juice-mango": { name: "Jus de Mangue", desc: "" },
+  "juice-pineapple": { name: "Jus d'Ananas", desc: "" },
+  "juice-kiwi": { name: "Jus de Kiwi", desc: "" },
 
-// ——— Drinks (Cocktails sans alcool)
-"mocktail-florida": { name: "Florida", desc: "Agrumes, pétillant" },
-"mocktail-bora-bora": { name: "Bora Bora", desc: "Ananas, coco" },
-"mocktail-pinacolada": { name: "Piñacolada", desc: "Coco, ananas" },
-"mocktail-ocean-11": { name: "Ocean 11", desc: "Bleuet, agrumes" },
+  // ——— Drinks (Jus pressés)
+  "pressed-apple": { name: "Jus de Pomme Pressé", desc: "" },
+  "pressed-pineapple": { name: "Jus d'Ananas Pressé", desc: "" },
+  "pressed-carrot": { name: "Jus de Carotte Pressé", desc: "" },
+  "pressed-pomegranate": { name: "Jus de Grenade Pressé", desc: "" },
+  "pressed-watermelon": { name: "Jus de Pastèque Pressé", desc: "" },
 
-// ——— Drinks (Jus)
-"juice-orange": { name: "Jus d’Orange", desc: "Pressé minute ou nectar" },
-"juice-lemon": { name: "Jus de Citron", desc: "Citron frais" },
-"juice-lemon-mint": { name: "Citron & Menthe", desc: "Citron, menthe" },
-"juice-carrot": { name: "Jus de Carotte", desc: "Carotte fraîche" },
-"juice-banana": { name: "Jus de Banane", desc: "Banane, lait au choix" },
-"juice-strawberry": { name: "Jus de Fraise", desc: "Fraise mixée" },
-"juice-apple": { name: "Jus de Pomme", desc: "Pomme douce" },
-"juice-peach": { name: "Jus de Pêche", desc: "Pêche, douceur" },
-"juice-avocado": { name: "Jus d’Avocat", desc: "Avocat onctueux" },
-"juice-mango": { name: "Jus de Mangue", desc: "Mangue mûre" },
-"juice-pineapple": { name: "Jus d’Ananas", desc: "Ananas tropical" },
-"juice-kiwi": { name: "Jus de Kiwi", desc: "Kiwi acidulé" },
+  // ——— Drinks (Boissons fraîches)
+  "drink-water-33cl": { name: "Eau minérale 33 cl", desc: "" },
+  "drink-water-50cl": { name: "Eau 50cl", desc: "" },
+  "drink-soda": { name: "Boissons gazeuses", desc: "" },
+  "drink-iced-tea": { name: "Thé glacé (Citron/Pêche)", desc: "" },
+  "drink-beer-na": { name: "Bière sans alcool", desc: "" },
+  "drink-redbull": { name: "Red Bull", desc: "" },
 
-// ——— Drinks (Jus pressés)
-"pressed-apple": { name: "Jus de Pomme Pressé", desc: "Pomme pressée à froid" },
-"pressed-pineapple": { name: "Jus d’Ananas Pressé", desc: "Ananas pressé à froid" },
-"pressed-carrot": { name: "Jus de Carotte Pressé", desc: "Carotte pressée à froid" },
-"pressed-pomegranate": { name: "Jus de Grenade Pressé", desc: "Grenade pressée à froid" },
-"pressed-watermelon": { name: "Jus de Pastèque Pressé", desc: "Pastèque pressée à froid" },
+  // ——— Drinks (Nos Thés)
+  "tea-mint": { name: "Thé à la menthe", desc: "" },
+  "tea-american": { name: "Thé américain", desc: "" },
+  "tea-infusion": { name: "Infusion", desc: "" },
+  "tea-black": { name: "Thé noir", desc: "" },
+  "tea-special": { name: "Thé spécial", desc: "" },
+  "tea-black-special": { name: "Thé noir spécial", desc: "" },
 
-// ——— Drinks (Boissons fraîches)
-"drink-water-33cl": { name: "Eau minérale 33 cl", desc: "" },
-"drink-water-50cl": { name: "Eau minérale 1/2 l", desc: "" },
-"drink-soda": { name: "Boissons gazeuses", desc: "" },
-"drink-iced-tea": { name: "Thé glacé citron/pêche", desc: "" },
-"drink-beer-na": { name: "Bière sans alcool", desc: "" },
-"drink-redbull": { name: "Red Bull", desc: "" },
+  // ——— Drinks (Boissons Chaudes)
+  "hot-espresso": { name: "Expresso", desc: "" },
+  "hot-americano": { name: "Café américain", desc: "" },
+  "hot-milk": { name: "Lait chaud", desc: "" },
+  "hot-nespresso": { name: "Nespresso", desc: "" },
+  "hot-capp-italian": { name: "Cappuccino italien", desc: "Avec mousse de lait" },
+  "hot-nespresso-creme": { name: "Nespresso crème", desc: "" },
+  "hot-nespresso-double": { name: "Nespresso Double", desc: "" },
+  "hot-flavored": { name: "Café aromatisé", desc: "Caramel / Noisette / Vanille" },
+  "hot-cafe-creme": { name: "Café crème", desc: "" },
+  "hot-nescafe-lait": { name: "Nescafé au lait", desc: "" },
+  "hot-chocolate": { name: "Chocolat chaud", desc: "" },
+  "hot-capp-vanille-noisette": { name: "Cappuccino", desc: "Caramel, noisette, vanille, chantilly" },
+  "hot-royal": { name: "Café royal", desc: "" },
+  "hot-double": { name: "Café double", desc: "" },
+  "hot-choc-chantilly": { name: "Chocolat chantilly", desc: "" },
+  "hot-latte-macchiato": { name: "Latte Macchiato", desc: "" },
+  "hot-bonbon": { name: "Café Bonbon", desc: "" },
 
-// ——— Drinks (Nos Thés)
-"tea-mint": { name: "Thé à la menthe", desc: "" },
-"tea-american": { name: "Thé américain", desc: "" },
-"tea-infusion": { name: "Infusion", desc: "" },
-"tea-black": { name: "Thé noir", desc: "" },
-"tea-special": { name: "Thé spécial", desc: "" },
-"tea-black-special": { name: "Thé noir spécial", desc: "" },
+  // ——— Breakfast (Formules)
+  "breakfast-formule-espagnole": { name: "Petit-déjeuner Espagnol", desc: "2 œufs, panier de pain, purée de tomate, fromage manchego, huile d'ail, boisson chaude, mini jus d'orange, eau minérale" },
+  "breakfast-formule-marocaine": { name: "Petit-déjeuner Marocain", desc: "Harcha, msemen, baghrir, pain de blé, accompagnements (beurre, fromage, miel, amlou), boisson chaude, mini jus d'orange, eau minérale" },
 
-// ——— Drinks (Boissons Chaudes)
-"hot-espresso": { name: "Expresso", desc: "" },
-"hot-americano": { name: "Café américain", desc: "" },
-"hot-milk": { name: "Lait chaud", desc: "" },
-"hot-nespresso": { name: "Nespresso", desc: "" },
-"hot-capp-italian": { name: "Cappuccino italien (mousse de lait)", desc: "" },
-"hot-nespresso-creme": { name: "Nespresso crème", desc: "" },
-"hot-nespresso-double": { name: "Nespresso Double", desc: "" },
-"hot-flavored": { name: "Café aromatisé (caramel / noisette / vanille)", desc: "" },
-"hot-cafe-creme": { name: "Café crème", desc: "" },
-"hot-nescafe-lait": { name: "Nescafé au lait", desc: "" },
-"hot-chocolate": { name: "Chocolat chaud", desc: "" },
-"hot-capp-vanille-noisette": { name: "Cappuccino vanille/noisette chantilly", desc: "" },
-"hot-royal": { name: "Café royal", desc: "" },
-"hot-double": { name: "Café double", desc: "" },
-"hot-choc-chantilly": { name: "Chocolat chantilly", desc: "" },
-"hot-latte-macchiato": { name: "Latte Macchiato", desc: "" },
-"hot-bonbon": { name: "Café Bonbon", desc: "" },
+  // ——— Breakfast (Bols)
+  "bowl-original-yogurt": { name: "Bol Yaourt Original", desc: "Yaourt avec granola, fruits de saison et miel" },
+  "bowl-amlou-yogurt": { name: "Bol Yaourt Amlou", desc: "Yaourt avec granola, amlou, fruits de saison et miel" },
+  "bowl-chia-pudding": { name: "Bol Pudding de Chia", desc: "Graines de chia avec granola et fruits de saison" },
 
-//BREAKFAST
+  // ——— Breakfast (Tartines)
+  "toast-avo-poached": { name: "Tartine Avocat & Œuf Poché", desc: "Avocat, œuf poché, roquette" },
+  "toast-burrata": { name: "Tartine Burrata", desc: "Burrata, tomate cerise, glaçage balsamique, noix" },
+  "toast-figtastic": { name: "Tartine Figtastic", desc: "Brie, figue, miel, noix" },
+  "toast-salmon": { name: "Tartine Saumon Fumé", desc: "Saumon fumé, fromage à tartiner, roquette, flocons de piment" },
 
-// ——— Breakfast (Formules)
-"breakfast-formule-espagnole": { name: "Espagnole", desc: "2 œufs, panier de pain; purée de tomate, manchego, huile d’ail; boisson chaude; mini jus d’orange; eau minérale" },
-"breakfast-formule-marocaine": { name: "Marocaine", desc: "Harcha, rghayf, baghrir, pain de blé; accompagnement (beurre, fromage, miel, amlou); boisson chaude; mini jus d’orange; eau minérale" },
+  // ——— Breakfast (Petits pains briochés)
+  "bun-egg": { name: "Pain Brioché Œuf", desc: "Œufs brouillés, cheddar" },
+  "bun-avo-herb": { name: "Pain Brioché Avocat & Herbes", desc: "Œufs brouillés, avocat, fromage à tartiner, cheddar" },
+  "bun-woods": { name: "Pain Brioché Woods", desc: "Œufs brouillés, cheddar, oignons caramélisés" },
 
-// ——— Breakfast (Bols)
-"bowl-original-yogurt": { name: "Yaourt Original", desc: "Yaourt, granola, fruits de saison, miel" },
-"bowl-amlou-yogurt": { name: "Yaourt Amlou", desc: "Yaourt, granola, amlou, fruits de saison, miel" },
-"bowl-chia-pudding": { name: "Pudding de Chia", desc: "Chia, granola, fruits de saison" },
+  // ——— Breakfast (Sandwichs)
+  "sandwich-tunacado": { name: "Sandwich Tunacado", desc: "Avocat, mousse de thon, pesto, tomate" },
+  "sandwich-spicytuna": { name: "Sandwich Spicy Tuna", desc: "Mousse de thon, tomate, jalapeño, tabasco, pesto" },
+  "sandwich-mozacado": { name: "Sandwich Mozacado", desc: "Mozzarella, avocat, tomate, pesto" },
+  "sandwich-toast-hollandais": { name: "Toast Hollandais", desc: "Tartine style hollandaise" },
+  "sandwich-chicken-woods": { name: "Sandwich Chicken Woods", desc: "Poulet grillé, tomate, roquette, sauce maison" },
+  "sandwich-chicken-parm": { name: "Sandwich Chicken Parm", desc: "Poulet grillé, aïoli, tomate, parmesan" },
 
-// ——— Breakfast (Tartines)
-"toast-avo-poached": { name: "Tartine Avocat & Œuf Poché", desc: "Avocat, œuf poché, roquette" },
-"toast-burrata": { name: "Tartine Burrata", desc: "Burrata, tomate cerise, glaçage balsamique, noix" },
-"toast-figtastic": { name: "Tartine Figtastic", desc: "Brie, figue, miel, noix" },
-"toast-salmon": { name: "Tartine Saumon", desc: "Saumon, fromage à tartiner, roquette, flocons de piment" },
+  // ——— Breakfast (Œufs)
+  "egg-fried-1": { name: "1 Œuf au Plat", desc: "" },
+  "egg-fried-2": { name: "2 Œufs au Plat", desc: "" },
+  "egg-fried-3": { name: "3 Œufs au Plat", desc: "" },
+  "omelette-plain": { name: "Omelette Nature", desc: "Simple et moelleuse" },
+  "omelette-cheese": { name: "Omelette au Fromage", desc: "Avec fromage fondu" },
+  "omelette-cheese-turkey": { name: "Omelette Fromage & Dinde", desc: "Avec fromage et dinde" },
+  "omelette-khlie": { name: "Omelette Khlie", desc: "Bœuf séché marocain traditionnel" },
+  "omelette-tuna": { name: "Omelette au Thon", desc: "Avec thon" },
+  "omelette-shrimp": { name: "Omelette aux Crevettes", desc: "Avec crevettes sautées" },
 
-// ——— Breakfast (Petits pains briochés)
-"bun-egg": { name: "Pain brioché Œuf", desc: "Œufs brouillés, cheddar" },
-"bun-avo-herb": { name: "Pain brioché Avocat & Herbes", desc: "Œufs brouillés, avocat, fromage à tartiner, cheddar" },
-"bun-woods": { name: "Pain brioché Woods", desc: "Œufs brouillés, cheddar, oignons caramélisés" },
+  // ——— Breakfast (À la Carte)
+  "alacarte-chocolate-bread": { name: "Pain au Chocolat", desc: "Pain au chocolat ou croissant" },
+  "alacarte-turnover": { name: "Chausson au Fromage ou aux Amandes", desc: "Pâte feuilletée garnie de fromage ou d'amandes" },
+  "alacarte-bread-plate": { name: "Assortiment de Pains", desc: "Pain de blé, harcha, msemen ou baghrir avec 2 accompagnements (beurre, fromage à tartiner, confiture, huile d'olive, amlou, miel)" },
+  "alacarte-cheese-toast": { name: "Toast au Fromage", desc: "Pain toasté avec fromage fondu" },
+  "alacarte-turkey-cheese-toast": { name: "Toast Dinde & Fromage", desc: "Pain toasté avec dinde et fromage" },
+  "alacarte-croque-cheese": { name: "Croque Fromage", desc: "Croque classique au fromage" },
+  "alacarte-baghrir-amlou": { name: "Baghrir avec Amlou", desc: "Crêpes marocaines à la semoule avec amlou" },
+  "alacarte-croque-turkey-cheese": { name: "Croque Dinde & Fromage", desc: "Croque garni de dinde et fromage" },
+  "alacarte-khlie-eggs": { name: "Khlie avec 2 Œufs", desc: "Bœuf séché traditionnel servi avec 2 œufs" },
 
-// ——— Breakfast (Sandwichs)
-"sandwich-tunacado": { name: "Tunacado", desc: "Avocat, mousse de thon, pesto, tomate" },
-"sandwich-spicytuna": { name: "Spicytuna", desc: "Mousse de thon, tomate, jalapeño, tabasco, pesto" },
-"sandwich-mozacado": { name: "Mozacado", desc: "Mozzarella, avocat, tomate, pesto" },
-"sandwich-toast-hollandais": { name: "Toast Hollandais", desc: "Tartine à la hollandaise" },
-"sandwich-chicken-woods": { name: "Chicken Woods", desc: "Poulet grillé, tomate, roquette, sauce maison" },
-"sandwich-chicken-parm": { name: "Chicken Parm", desc: "Poulet grillé, aïoli, tomate, parmesan" },
+  // ——— Breakfast (Toast Hollandais)
+  "toast-amsterdam": { name: "Toast Amsterdam", desc: "Toast style hollandais" },
+  "toast-rotterdam": { name: "Toast Rotterdam", desc: "Toast style hollandais" },
 
-// ——— Breakfast (Œufs)
-"egg-fried-1": { name: "1 Œuf au Plat", desc: "Œuf au plat" },
-"egg-fried-2": { name: "2 Œufs au Plat", desc: "Œufs au plat" },
-"egg-fried-3": { name: "3 Œufs au Plat", desc: "Œufs au plat" },
-"omelette-plain": { name: "Omelette Nature", desc: "Simple et moelleuse" },
-"omelette-cheese": { name: "Omelette au Fromage", desc: "Fromage fondant" },
-"omelette-cheese-turkey": { name: "Omelette Fromage & Dinde", desc: "Fromage et dinde" },
-"omelette-khlie": { name: "Omelette Spéciale Khlie", desc: "Viande séchée marocaine" },
-"omelette-tuna": { name: "Omelette Spéciale Thon", desc: "Thon" },
-"omelette-shrimp": { name: "Omelette aux Crevettes", desc: "Crevettes sautées" },
+  // ——— Breakfast (Formules Enfants)
+  "kids-formula-1": { name: "Formule Enfant I", desc: "Baghrir avec amlou, mini pancakes au chocolat, cornflakes, choix de chocolat froid ou lait chaud" },
+  "kids-formula-2": { name: "Formule Enfant II", desc: "Pancake au chocolat, cornflakes, choix de chocolat froid ou lait chaud" },
 
-// ——— Breakfast (À la Carte)
-"alacarte-chocolate-bread": { name: "Pain au Chocolat, Croissant", desc: "Viennoiseries : pain au chocolat, croissant" },
-"alacarte-turnover": { name: "Chausson au Fromage ou aux Amandes", desc: "Feuilleté garni au fromage ou aux amandes" },
-"alacarte-bread-plate": { name: "Assortiment de Pains avec 2 Accompagnements", desc: "Pain de blé, harcha, rghayf ou baghrir avec 2 accompagnements (beurre, fromage blanc, confiture, huile d’olive, amlou, miel)" },
-"alacarte-cheese-toast": { name: "Toast au Fromage", desc: "Pain toasté avec fromage" },
-"alacarte-turkey-cheese-toast": { name: "Toast Dinde & Fromage", desc: "Pain toasté garni de dinde et fromage" },
-"alacarte-croque-cheese": { name: "Croque Fromage", desc: "Croque garni au fromage" },
-"alacarte-baghrir-amlou": { name: "Baghrir avec Amlou", desc: "Mini crêpes marocaines servies avec amlou" },
-"alacarte-croque-turkey-cheese": { name: "Croque Dinde & Fromage", desc: "Croque garni de dinde et fromage" },
-"alacarte-khlie-eggs": { name: "Khlie avec 2 Œufs", desc: "Viande séchée marocaine (khlie) servie avec 2 œufs" },
+  // ——— Entrées Froides
+  "salade-marocaine": { name: "Salade marocaine", desc: "" },
+  "salade-nicoise": { name: "Salade niçoise", desc: "" },
+  "salade-cesar": { name: "Salade César", desc: "" },
+  "salade-exotique": { name: "Salade exotique", desc: "" },
+  "salade-avocat-crevettes": { name: "Salade d'avocat aux crevettes", desc: "" },
+  "salade-marine": { name: "Salade marine", desc: "" },
+  "salade-woods": { name: "Salade Signature Woods", desc: "Quinoa, mangue, kiwi, ananas, avocat, crevettes, saumon fumé" },
 
-// ——— Breakfast (Toast Hollandais)
-"toast-amsterdam": { name: "Amsterdam", desc: "Toast hollandais" },
-"toast-rotterdam": { name: "Rotterdam", desc: "Toast hollandais" },
+  // ——— Entrées Chaudes
+  "soupe-fruits-de-mer": { name: "Soupe aux fruits de mer", desc: "" },
+  "creme-legumes": { name: "Crème de légumes", desc: "" },
+  "gratin-fruits-de-mer": { name: "Gratin aux fruits de mer", desc: "" },
+  "pilpil-crevettes": { name: "Pil-Pil de Crevettes", desc: "" },
 
-// ——— Breakfast (Formules Enfants)
-"kids-formula-1": { name: "Formule Enfant I", desc: "Baghrir avec amlou; mini crêpes au chocolat; cornflakes; chocolat froid ou lait chaud" },
-"kids-formula-2": { name: "Formule Enfant II", desc: "Pancake au chocolat; cornflakes; chocolat froid ou lait chaud" },
+  // ——— Plats (À Base Poisson)
+  "merlan": { name: "Filet de Merlan Frit", desc: "" },
+  "crevettes-grillees": { name: "Crevettes Grillées", desc: "" },
+  "thon": { name: "Filet de Thon", desc: "" },
+  "espadon": { name: "Filet d'Espadon Grillé", desc: "" },
+  "saumon-papillote": { name: "Saumon en Papillote", desc: "" },
+  "friture-1p": { name: "Menu Friture (1 personne)", desc: "Entrée, plat principal & dessert" },
+  "friture-2p": { name: "Menu Friture (2 personnes)", desc: "Entrée, plat principal & dessert" },
 
-// ——— Entrées Froides
-"salade-marocaine": { name: "Salade marocaine", desc: "" },
-"salade-nicoise": { name: "Salade niçoise", desc: "" },
-"salade-cesar": { name: "Salade César", desc: "" },
-"salade-exotique": { name: "Salade exotique", desc: "" },
-"salade-avocat-crevettes": { name: "Salade d’avocat aux crevettes", desc: "" },
-"salade-marine": { name: "Salade marine", desc: "" },
-"salade-woods": { name: "Salade Woods", desc: "quinoa, mangue, kiwi, ananas, avocat, crevettes, saumon fumé" },
+  // ——— Plats (À Base Viande & Poulet)
+  "emince-poulet": { name: "Émincé de Poulet Sauté", desc: "" },
+  "brochettes-poulet": { name: "Brochettes de Poulet", desc: "" },
+  "filet-poulet": { name: "Filet de Poulet Grillé", desc: "" },
+  "mixed-grill": { name: "Mixed Grill", desc: "" },
+  "emince-boeuf": { name: "Émincé de Bœuf Sauté", desc: "" },
+  "stroganoff": { name: "Émincé Stroganoff", desc: "" },
+  "entrecote": { name: "Entrecôte", desc: "" },
+  "filet-boeuf": { name: "Filet de Bœuf", desc: "" },
 
-// ——— Entrées Chaudes
-"soupe-fruits-de-mer": { name: "Soupe aux fruits de mer", desc: "" },
-"creme-legumes": { name: "Crème de légumes", desc: "" },
-"gratin-fruits-de-mer": { name: "Gratin aux fruits de mer", desc: "" },
-"pilpil-crevettes": { name: "Pilpil de crevettes", desc: "" },
-// ——— Plats (À Base Poisson)
-"merlan": { name: "Filet de merlan", desc: "" },
-"crevettes-grillees": { name: "Crevettes grillées", desc: "" },
-"thon": { name: "Filet de thon", desc: "" },
-"espadon": { name: "Filet d’espadon grillé", desc: "" },
-"saumon-papillote": { name: "Darne de saumon en papillote", desc: "" },
-"friture-1p": { name: "Friture 1 personne", desc: "entrée, plat, dessert" },
-"friture-2p": { name: "Friture 2 personnes", desc: "entrée, plat, dessert" },
+  // ——— Plats Marocains
+  "tajine-viande-hachee": { name: "Tajine de Viande Hachée", desc: "" },
+  "tajine-pruneaux": { name: "Tajine de Bœuf aux Pruneaux", desc: "" },
+  "tajine-coquelet-citron": { name: "Tajine de Coquelet au Citron Confit", desc: "" },
+  "tangia": { name: "Tangia Marrakchia", desc: "" },
+  "pastilla-poulet": { name: "Pastilla de Poulet", desc: "" },
+  "pastilla-poisson": { name: "Pastilla de Poisson", desc: "" },
+  "couscous-veg": { name: "Couscous Végétarien (Vendredi)", desc: "" },
+  "couscous-poulet": { name: "Couscous au Poulet (Vendredi)", desc: "" },
+  "couscous-viande": { name: "Couscous à la Viande (Vendredi)", desc: "" },
 
-// ——— Plats (À Base Viande & Poulet)
-"emince-poulet": { name: "Émincé de poulet", desc: "" },
-"brochettes-poulet": { name: "Brochettes de poulet", desc: "" },
-"filet-poulet": { name: "Filet de poulet grillé", desc: "" },
-"mixed-grill": { name: "Mixed grill", desc: "" },
-"emince-boeuf": { name: "Émincé de bœuf", desc: "" },
-"stroganoff": { name: "Émincé stroganoff", desc: "" },
-"entrecote": { name: "Entrecôte", desc: "" },
-"filet-boeuf": { name: "Filet de bœuf", desc: "" },
+  // ——— Pastas
+  "pasta-annalisa": { name: "Pasta alla Annalisa", desc: "" },
+  "pasta-carbonara": { name: "Spaghetti alla Carbonara", desc: "Dinde fumée, sauce carbonara, parmesan" },
+  "linguine-scampi": { name: "Linguine Scampi", desc: "Crevettes sautées au beurre, ail & citron" },
+  "pasta-bolognaise": { name: "Spaghetti Bolognese", desc: "Sauce bolognaise riche, basilic & parmesan" },
+  "farfalle-crema-gamberi": { name: "Farfalle avec Crème & Crevettes", desc: "" },
+  "pasta-pollo": { name: "Pasta al Pollo", desc: "Poulet, crème fraîche, basilic, parmesan" },
+  "pasta-pollo-pesto": { name: "Penne au Poulet et Pesto", desc: "Penne avec poulet, pesto, basilic" },
+  "pasta-tonno": { name: "Pasta au Thon", desc: "Thon, tomate, oignon, olives, parmesan" },
+  "pasta-casa": { name: "Pasta de la Maison", desc: "" },
+  "pasta-frutti-di-mare": { name: "Pasta aux Fruits de Mer", desc: "Fruits de mer avec sauce au choix, parmesan" },
+  "lasagnes-bolognaise": { name: "Lasagnes Bolognaise", desc: "" },
+  "pasta-arrabiata": { name: "Penne Arrabbiata", desc: "Sauce tomate épicée avec ail et basilic" },
+  "spaghetti-noir-mer": { name: "Spaghetti Noir aux Fruits de Mer", desc: "Avec sauce au choix, parmesan" },
 
-// ——— Plats Marocains
-"tajine-viande-hachee": { name: "Tajine de viande hachée", desc: "" },
-"tajine-pruneaux": { name: "Tajine de viande aux pruneaux", desc: "" },
-"tajine-coquelet-citron": { name: "Tajine de coquelet au citron confit", desc: "" },
-"tangia": { name: "Tangia", desc: "" },
-"pastilla-poulet": { name: "Pastilla de poulet", desc: "" },
-"pastilla-poisson": { name: "Pastilla de poisson", desc: "" },
-"couscous-veg": { name: "Couscous végétarien (vendredi)", desc: "" },
-"couscous-poulet": { name: "Couscous au poulet (vendredi)", desc: "" },
-"couscous-viande": { name: "Couscous à la viande (vendredi)", desc: "" },
+  // ——— Pizzas
+  "pz-margherita": { name: "Margherita", desc: "Tomate, mozzarella, olives noires" },
+  "pz-frutti": { name: "Frutti di Mare", desc: "Tomate, mozzarella, calmars, crevettes, surimi, moules, olives noires" },
+  "pz-primavera": { name: "Primavera", desc: "Tomate, mozzarella, aubergine, courgette, champignons, poivron, oignon, tomate cerise" },
+  "pz-4formaggi": { name: "Quattro Formaggi", desc: "Tomate, mozzarella, edam, bleu, parmesan" },
+  "pz-prosciutto": { name: "Prosciutto", desc: "Tomate, mozzarella, dinde fumée" },
+  "pz-diavola": { name: "Diavola", desc: "Tomate, mozzarella, pepperoni, olives noires" },
+  "pz-tonno": { name: "Al Tonno", desc: "Tomate, mozzarella, thon, oignons, poivron, olives noires" },
+  "pz-4stagioni": { name: "Quattro Stagioni", desc: "Tomate, mozzarella, bœuf haché, fruits de mer, thon, poulet, olives noires" },
+  "pz-pollo-griglia": { name: "Pollo alla Griglia", desc: "Tomate, mozzarella, poulet grillé, sauce BBQ" },
+  "pz-royale-mixte": { name: "Royal Mix", desc: "Tomate, mozzarella, garnitures assorties" },
+  "pz-bolognaise": { name: "Bolognaise", desc: "Tomate, mozzarella, bœuf haché, olives noires" },
+  "pz-woods": { name: "Spécial Woods", desc: "Tomate, espadon, crevettes grises, thon" },
+  "pz-puttanesca": { name: "Puttanesca", desc: "Anchois, câpres, ail, olives noires" },
 
+  // ——— Apéritifs
+  "onion-rings-4": { name: "Rondelles d'oignon (4 pcs)", desc: "" },
+  "onion-rings-6": { name: "Rondelles d'oignon (6 pcs)", desc: "" },
+  "onion-rings-9": { name: "Rondelles d'oignon (9 pcs)", desc: "" },
+  "mozza-sticks-4": { name: "Bâtonnets de Mozzarella (4 pcs)", desc: "" },
+  "mozza-sticks-6": { name: "Bâtonnets de Mozzarella (6 pcs)", desc: "" },
+  "mozza-sticks-9": { name: "Bâtonnets de Mozzarella (9 pcs)", desc: "" },
+  "jalapenos-cheddar-4": { name: "Jalapeños au Cheddar (4 pcs)", desc: "" },
+  "jalapenos-cheddar-6": { name: "Jalapeños au Cheddar (6 pcs)", desc: "" },
+  "jalapenos-cheddar-9": { name: "Jalapeños au Cheddar (9 pcs)", desc: "" },
 
-// ——— Pastas
-"pasta-annalisa": { name: "Pasta alla Annalisa", desc: "" },
-"pasta-carbonara": { name: "Pasta alla Carbonara", desc: "Dinde fumée, sauce carbonara, parmesan" },
-"linguine-scampi": { name: "Linguine alla Scampi", desc: "Crevettes sautées au beurre, ail, citron" },
-"pasta-bolognaise": { name: "Pasta alla Bolognaise", desc: "Sauce bolognaise, basilic, parmesan" },
-"farfalle-crema-gamberi": { name: "Farfalle alla Crema e Gamberi", desc: "" },
-"pasta-pollo": { name: "Pasta alla Pollo", desc: "Poulet, crème fraîche, basilic, parmesan" },
-"pasta-pollo-pesto": { name: "Pasta con Pollo al Pesto", desc: "Penne, poulet, pesto, basilic" },
-"pasta-tonno": { name: "Pasta alla Tonno", desc: "Thon, tomate, oignon, olives, parmesan" },
-"pasta-casa": { name: "Pasta alla Casa", desc: "" },
-"pasta-frutti-di-mare": { name: "Pasta alla Frutti di Mare", desc: "Fruits de mer, sauce au choix, parmesan" },
-"lasagnes-bolognaise": { name: "Lasagnes alla Bolognaise", desc: "" },
-"pasta-arrabiata": { name: "Pasta alla Arrabiata", desc: "Sauce tomate pimentée, ail, basilic" },
-"spaghetti-noir-mer": { name: "Spaghetti noir, fruits de mer", desc: "Sauce au choix, parmesan" },
+  // ——— Tex Mex
+  "nuggets-4": { name: "Nuggets de Poulet (4 pcs)", desc: "" },
+  "nuggets-6": { name: "Nuggets de Poulet (6 pcs)", desc: "" },
+  "nuggets-9": { name: "Nuggets de Poulet (9 pcs)", desc: "" },
+  "drumsticks-4": { name: "Cuisses de Poulet (4 pcs)", desc: "" },
+  "drumsticks-6": { name: "Cuisses de Poulet (6 pcs)", desc: "" },
+  "jalapenos-bites-4": { name: "Bouchées Jalapeños (4 pcs)", desc: "" },
+  "jalapenos-bites-6": { name: "Bouchées Jalapeños (6 pcs)", desc: "" },
+  "jalapenos-bites-9": { name: "Bouchées Jalapeños (9 pcs)", desc: "" },
 
-// ——— Pizzas
-"pz-margherita": { name: "Margherita", desc: "Tomates, mozzarella, olives noires" },
-"pz-frutti": { name: "Frutti di Mare", desc: "Tomates, mozzarella, calmars, crevettes, surimi, moules, olive noire" },
-"pz-primavera": { name: "Primavera", desc: "Tomates, mozzarella, aubergine, courgette, champignon, poivron, oignon, tomate cerise" },
-"pz-4formaggi": { name: "Quattro Formaggi", desc: "Tomates, mozzarella, edam, roquefort, parmesan" },
-"pz-prosciutto": { name: "Prosciutto (dinde fumée)", desc: "Tomates, mozzarella, dinde fumée" },
-"pz-diavola": { name: "Diavola", desc: "Tomates, mozzarella, pepperoni, olive noire" },
-"pz-tonno": { name: "Al Tonno", desc: "Tomates, mozzarella, thon, oignons, poivrons, olive noire" },
-"pz-4stagioni": { name: "Quattro Stagioni", desc: "Tomates, mozzarella, viande hachée, fruits de mer, thon, poulet, olive noire" },
-"pz-pollo-griglia": { name: "Al Pollo alla Griglia", desc: "Poulet grillé, sauce barbecue" },
-"pz-royale-mixte": { name: "Royale Mixte", desc: "Tomates, mozzarella, mixte" },
-"pz-bolognaise": { name: "Bolognaise", desc: "Tomates, mozzarella, viande hachée, olive noire" },
-"pz-woods": { name: "WOODS", desc: "Tomates, espadon, crevettes grises, thon" },
-"pz-puttanesca": { name: "Puttanesca", desc: "Anchois, câpres, ail, olives noires" },
+  // ——— Burgers
+  "burger-chicken": { name: "Burger Poulet", desc: "Steak de poulet, cheddar, salade, tomate" },
+  "burger-cheese": { name: "Cheeseburger", desc: "Steak de bœuf, salade, tomate" },
+  "burger-double-cheese": { name: "Double Cheeseburger", desc: "Double bœuf, double cheddar, salade, tomate" },
+  "burger-american": { name: "Burger Américain", desc: "Steak de bœuf, œuf, cheddar, salade, tomate" },
+  "burger-cheese-jalapenos": { name: "Burger Cheese Jalapeños", desc: "Steak de bœuf, salade, tomate, oignon, mayo chipotle" },
+  "burger-chicken-ananas": { name: "Burger Poulet Ananas", desc: "Poulet grillé, salade, tomate, oignon, champignons, ananas" },
 
+  // ——— Crêpes Salées
+  "crepe-fromage": { name: "Crêpe au Fromage", desc: "Fromage avec sauce béchamel" },
+  "crepe-thon": { name: "Crêpe au Thon", desc: "Thon, fromage, origan, sauce tomate" },
+  "crepe-dinde-fromage": { name: "Crêpe Dinde & Fromage", desc: "Dinde fumée, fromage, œuf, béchamel" },
+  "crepe-poulet-champignons": { name: "Crêpe Poulet & Champignons", desc: "Poulet, fromage, champignons, béchamel" },
+  "crepe-viande-hachee": { name: "Crêpe Viande Hachée", desc: "Bœuf haché, fromage, origan, sauce tomate" },
+  "crepe-mixte": { name: "Crêpe Mixte", desc: "Bœuf haché, poulet, dinde fumée, fromage, béchamel" },
 
-// ——— Apéritifs
-"onion-rings-4": { name: "Rondelles d’oignon (4p)", desc: "" },
-"onion-rings-6": { name: "Rondelles d’oignon (6p)", desc: "" },
-"onion-rings-9": { name: "Rondelles d’oignon (9p)", desc: "" },
-"mozza-sticks-4": { name: "Bâtonnets de mozzarella (4p)", desc: "" },
-"mozza-sticks-6": { name: "Bâtonnets de mozzarella (6p)", desc: "" },
-"mozza-sticks-9": { name: "Bâtonnets de mozzarella (9p)", desc: "" },
-"jalapenos-cheddar-4": { name: "Jalapeños au cheddar (4p)", desc: "" },
-"jalapenos-cheddar-6": { name: "Jalapeños au cheddar (6p)", desc: "" },
-"jalapenos-cheddar-9": { name: "Jalapeños au cheddar (9p)", desc: "" },
+  // ——— Tacos
+  "tacos-poulet": { name: "Tacos au Poulet", desc: "" },
+  "tacos-cordon-bleu": { name: "Tacos Cordon Bleu", desc: "" },
+  "tacos-viande": { name: "Tacos au Bœuf", desc: "" },
+  "tacos-woods-mixte": { name: "Tacos Mixte Woods", desc: "" },
 
-// ——— Tex Mex
-"nuggets-4": { name: "Nuggets (4p)", desc: "" },
-"nuggets-6": { name: "Nuggets (6p)", desc: "" },
-"nuggets-9": { name: "Nuggets (9p)", desc: "" },
-"drumsticks-4": { name: "Cuisses de poulet (4p)", desc: "" },
-"drumsticks-6": { name: "Cuisses de poulet (6p)", desc: "" },
-"jalapenos-bites-4": { name: "Jalapeños Bites (4p)", desc: "" },
-"jalapenos-bites-6": { name: "Jalapeños Bites (6p)", desc: "" },
-"jalapenos-bites-9": { name: "Jalapeños Bites (9p)", desc: "" },
+  // ——— Sandwiches & Panini
+  "sandwich-fajitas-poulet": { name: "Sandwich Fajitas au Poulet", desc: "" },
+  "sandwich-american-bbq": { name: "Sandwich American BBQ", desc: "Deux steaks de bœuf grillés, œuf, cheddar, salade, sauce BBQ" },
+  "sandwich-woods": { name: "Sandwich Woods", desc: "Steak de bœuf, poulet, cheddar, salade, sauce au choix" },
+  "panini-classic-italien": { name: "Panini Classic Italien", desc: "Mozzarella, tomate, pesto, basilic" },
+  "panini-poulet-pesto": { name: "Panini Poulet Pesto", desc: "Poulet grillé, mozzarella, pesto, poivron rouge, oignon" },
+  "panini-tuna-melt": { name: "Panini Tuna Melt", desc: "Salade de thon avec mozzarella fondue" },
 
+  // ——— Crêpes & Gaufres Sucrées
+  "sweet-crepe-simple": { name: "Crêpe / Gaufre Sucrée", desc: "" },
+  "sweet-crepe-miel": { name: "Crêpe / Gaufre au Miel", desc: "" },
+  "sweet-crepe-caramel": { name: "Crêpe / Gaufre au Caramel", desc: "" },
+  "sweet-crepe-amlou": { name: "Crêpe / Gaufre à l'Amlou", desc: "" },
+  "sweet-crepe-choco": { name: "Crêpe / Gaufre au Chocolat", desc: "" },
+  "sweet-crepe-choco-banane": { name: "Crêpe / Gaufre Chocolat Banane", desc: "" },
+  "sweet-crepe-choco-blanc": { name: "Crêpe / Gaufre Chocolat Blanc", desc: "" },
+  "sweet-crepe-nutella": { name: "Crêpe / Gaufre au Nutella", desc: "" },
+  "sweet-crepe-black-white": { name: "Crêpe / Gaufre Black & White", desc: "" },
+  "sweet-crepe-nutella-noix": { name: "Crêpe / Gaufre Nutella-Noix", desc: "" },
+  "sweet-crepe-nutella-banane": { name: "Crêpe / Gaufre Nutella-Banane", desc: "" },
+  "sweet-crepe-pistache": { name: "Crêpe / Gaufre Pistache", desc: "" },
+  "sweet-crepe-mix": { name: "Crêpe / Gaufre Oreo / Kinder / Lotus / KitKat", desc: "" },
+  "sweet-crepe-woods": { name: "Crêpe / Gaufre Woods", desc: "Nutella, noix, boule de glace" },
 
-// ——— Burgers
-"burger-chicken": { name: "Chicken Burger", desc: "Steak de poulet, cheddar, salade, tomate" },
-"burger-cheese": { name: "Cheeseburger", desc: "Viande hachée, salade, tomate" },
-"burger-double-cheese": { name: "Double Cheeseburger", desc: "Double viande hachée, 2x cheddar, salade, tomate" },
-"burger-american": { name: "American Burger", desc: "Viande hachée, œuf, cheddar, salade, tomate" },
-"burger-cheese-jalapenos": { name: "Cheese Jalapeños", desc: "Viande hachée, salade, tomate, oignon, mayo chipotle" },
-"burger-chicken-ananas": { name: "Chicken Ananas", desc: "Poulet grillé, salade, tomate, oignon, champignons, ananas" },
+  // ——— Pancakes
+  "pancake-simple": { name: "Pancake", desc: "" },
+  "pancake-miel": { name: "Pancake au Miel", desc: "" },
+  "pancake-caramel": { name: "Pancake au Caramel", desc: "" },
+  "pancake-amlou": { name: "Pancake à l'Amlou", desc: "" },
+  "pancake-choco": { name: "Pancake au Chocolat", desc: "" },
+  "pancake-choco-banane": { name: "Pancake Chocolat Banane", desc: "" },
+  "pancake-choco-blanc": { name: "Pancake Chocolat Blanc", desc: "" },
+  "pancake-nutella": { name: "Pancake au Nutella", desc: "" },
+  "pancake-black-white": { name: "Pancake Black & White", desc: "" },
+  "pancake-nutella-noix": { name: "Pancake Nutella-Noix", desc: "" },
+  "pancake-nutella-banane": { name: "Pancake Nutella-Banane", desc: "" },
+  "pancake-pistache": { name: "Pancake Pistache", desc: "" },
+  "pancake-mix": { name: "Pancake Oreo / Kinder / Lotus / KitKat", desc: "" },
+  "pancake-woods": { name: "Pancake Woods", desc: "Nutella, noix, boule de glace" },
 
-// ——— Crêpes Salées
-"crepe-fromage": { name: "Crêpe au fromage", desc: "Fromage, sauce béchamel" },
-"crepe-thon": { name: "Crêpe au thon", desc: "Thon, fromage, origan, sauce tomate" },
-"crepe-dinde-fromage": { name: "Crêpe dinde & fromage", desc: "Dinde fumée, fromage, œuf, béchamel" },
-"crepe-poulet-champignons": { name: "Crêpe poulet & champignon", desc: "Poulet, fromage, champignon, béchamel" },
-"crepe-viande-hachee": { name: "Crêpe viande hachée", desc: "Viande hachée, fromage, origan, sauce tomate" },
-"crepe-mixte": { name: "Crêpe mixte", desc: "Viande hachée, poulet, dinde fumée, fromage, béchamel" },
+  // ——— Desserts (Pâtisserie & Salades de fruits)
+  "dess-patisserie": { name: "Pâtisserie", desc: "" },
+  "dess-fruit-salad-1": { name: "Salade de Fruits (1 personne)", desc: "" },
+  "dess-fruit-salad-2": { name: "Salade de Fruits (2 personnes)", desc: "" },
+  "dess-fondant": { name: "Fondant au Chocolat", desc: "Avec une boule de glace" },
 
-// ——— Tacos
-"tacos-poulet": { name: "Tacos au poulet", desc: "" },
-"tacos-cordon-bleu": { name: "Tacos au cordon bleu", desc: "" },
-"tacos-viande": { name: "Tacos à la viande hachée", desc: "" },
-"tacos-woods-mixte": { name: "Tacos WOODS mixte", desc: "" },
+  // ——— Desserts (Frappuccino & Freakshake)
+  "frappuccino": { name: "Frappuccino", desc: "Choix de chocolat / caramel / vanille / noisette" },
+  "milkshake": { name: "Milkshake / Orange Shake", desc: "" },
+  "freakshake": { name: "Freakshake", desc: "Oreo, Nutella, chocolat, caramel ou cookies" },
 
-// ——— Sandwiches
-"sandwich-fajitas-poulet": { name: "Sandwich fajitas au poulet", desc: "" },
-"sandwich-american-bbq": { name: "Sandwich American BBQ", desc: "Deux steaks grillés, œuf, cheddar, salade, sauce BBQ" },
-"sandwich-woods": { name: "Sandwich WOODS", desc: "Viande haché, poulet, cheddar, salade, sauce au choix" },
+  // ——— Desserts (Coupes glacées)
+  "coupe-fruit-rouge": { name: "Coupe Fruit Rouge", desc: "Fraise, cerise, chantilly" },
+  "coupe-rocher": { name: "Coupe Rocher", desc: "Ferrero Rocher avec chantilly" },
+  "coupe-kitkat": { name: "Coupe KitKat", desc: "KitKat avec chantilly" },
+  "coupe-banana-split": { name: "Banana Split", desc: "Vanille, chocolat, fraise, banane, chantilly" },
+  "coupe-fraise-melba": { name: "Coupe Fraise Melba", desc: "Fraises, glace vanille, chantilly" },
+  "coupe-caraibes": { name: "Coupe Caraïbes", desc: "Solero, fraise, citron, chantilly" },
+  "coupe-caramelo": { name: "Coupe Caramelo", desc: "Caramel, speculoos, chantilly" },
+  "coupe-bisutto": { name: "Coupe Bisutto", desc: "Speculoos, Oreo, cookies, chantilly" },
+  "coupe-negrisco": { name: "Coupe Negrisco", desc: "Chocolat, noisette, pistache, chantilly" },
+  "coupe-exotique": { name: "Coupe Exotique", desc: "Ananas, Solero, citron, fraise, fruits, chantilly" },
+  "coupe-woods": { name: "Coupe Woods", desc: "6 boules de glace & sorbet assorties avec chantilly" },
 
-// ——— Panini
-"panini-classic-italien": { name: "Panini Classic italien", desc: "Mozzarella, tomate, pesto, basilic" },
-"panini-poulet-pesto": { name: "Panini Poulet Pesto", desc: "Poulet grillé, mozzarella, pesto, poivron rouge, oignon" },
-"panini-tuna-melt": { name: "Panini Tuna Melt", desc: "Salade de thon, mozzarella" },
-
-// ——— Crêpes & Gaufres Sucrées
-"sweet-crepe-simple": { name: "Crêpe / Gaufre sucrée", desc: "" },
-"sweet-crepe-miel": { name: "Crêpe / Gaufre au miel", desc: "" },
-"sweet-crepe-caramel": { name: "Crêpe / Gaufre au caramel", desc: "" },
-"sweet-crepe-amlou": { name: "Crêpe / Gaufre à l’amlou", desc: "" },
-"sweet-crepe-choco": { name: "Crêpe / Gaufre au chocolat", desc: "" },
-"sweet-crepe-choco-banane": { name: "Crêpe / Gaufre chocolat banane", desc: "" },
-"sweet-crepe-choco-blanc": { name: "Crêpe / Gaufre chocolat blanc", desc: "" },
-"sweet-crepe-nutella": { name: "Crêpe / Gaufre au Nutella", desc: "" },
-"sweet-crepe-black-white": { name: "Crêpe / Gaufre Black & White", desc: "" },
-"sweet-crepe-nutella-noix": { name: "Crêpe / Gaufre Nutella-noix", desc: "" },
-"sweet-crepe-nutella-banane": { name: "Crêpe / Gaufre Nutella-banane", desc: "" },
-"sweet-crepe-pistache": { name: "Crêpe / Gaufre pistache", desc: "" },
-"sweet-crepe-mix": { name: "Crêpe / Gaufre Oreo / Kinder / Lotus / KitKat", desc: "" },
-"sweet-crepe-woods": { name: "Crêpe / Gaufre WOODS", desc: "Nutella, noix, boule de glace" },
-
-// ——— Pancakes
-"pancake-simple": { name: "Pancake sucré", desc: "" },
-"pancake-miel": { name: "Pancake au miel", desc: "" },
-"pancake-caramel": { name: "Pancake au caramel", desc: "" },
-"pancake-amlou": { name: "Pancake à l’amlou", desc: "" },
-"pancake-choco": { name: "Pancake au chocolat", desc: "" },
-"pancake-choco-banane": { name: "Pancake chocolat banane", desc: "" },
-"pancake-choco-blanc": { name: "Pancake chocolat blanc", desc: "" },
-"pancake-nutella": { name: "Pancake au Nutella", desc: "" },
-"pancake-black-white": { name: "Pancake Black & White", desc: "" },
-"pancake-nutella-noix": { name: "Pancake Nutella-noix", desc: "" },
-"pancake-nutella-banane": { name: "Pancake Nutella-banane", desc: "" },
-"pancake-pistache": { name: "Pancake pistache", desc: "" },
-"pancake-mix": { name: "Pancake Oreo / Kinder / Lotus / KitKat", desc: "" },
-"pancake-woods": { name: "Pancake WOODS", desc: "Nutella, noix, boule de glace" },
-
-// ——— Desserts (Pâtisserie & Salades de fruits)
-"dess-patisserie": { name: "Pâtisserie", desc: "" },
-"dess-fruit-salad-1": { name: "Salade de fruits (1 personne)", desc: "" },
-"dess-fruit-salad-2": { name: "Salade de fruits (2 personnes)", desc: "" },
-"dess-fondant": { name: "Fondant au chocolat", desc: "avec boule de glace" },
-
-// ——— Desserts (Frappuccino & Freakshake)
-"frappuccino": { name: "Frappuccino", desc: "chocolat / caramel / vanille / noisette" },
-"milkshake": { name: "Milkshake / Orange shake", desc: "" },
-"freakshake": { name: "FreakShake", desc: "Oreo / Nutella / Chocolat / Caramel / Cookies" },
-
-// ——— Desserts (Coupes glacées)
-"coupe-fruit-rouge": { name: "Coupe Fruit Rouge", desc: "1 fraise, 2 cerise, chantilly" },
-"coupe-rocher": { name: "Coupe Rocher", desc: "2x Ferrero Rocher, chantilly" },
-"coupe-kitkat": { name: "Coupe Kit-Kat", desc: "2x Kit-Kat, chantilly" },
-"coupe-banana-split": { name: "Coupe Banana Split", desc: "Vanille, chocolat, fraise, banane, chantilly" },
-"coupe-fraise-melba": { name: "Coupe Fraise Melba", desc: "2x fraise, vanille, chantilly, fraise nature" },
-"coupe-caraibes": { name: "Coupe Caraïbes", desc: "Solero, fraise, citron, chantilly" },
-"coupe-caramelo": { name: "Coupe Caramelo", desc: "2x caramel, speculoos, chantilly" },
-"coupe-bisutto": { name: "Coupe Bisutto", desc: "Speculoos, Oreo, cookies, chantilly" },
-"coupe-negrisco": { name: "Coupe Negrisco", desc: "Chocolat, noisette, pistache, chantilly" },
-"coupe-exotique": { name: "Coupe Exotique", desc: "Ananas, Solero, citron, fraise, fruits, chantilly" },
-"coupe-woods": { name: "Coupe WOODS", desc: "6 boules variées, glace & sorbet, chantilly" },
-
-// ——— Desserts (Composez votre glace)
-"ice-chantilly": { name: "Crème chantilly", desc: "" },
-"ice-1-boule": { name: "1 boule de glace", desc: "" },
-"ice-2-boules": { name: "2 boules de glace", desc: "" },
-"ice-3-boules": { name: "3 boules de glace", desc: "" },
-"ice-4-boules": { name: "4 boules de glace", desc: "" },
-"ice-500g": { name: "½ kg de glace", desc: "" },
-"ice-1kg": { name: "1 kg de glace", desc: "" },
-"ice-tarte": { name: "Nos tartes glacées", desc: "" },
-
-  // … FR texts for the rest of your categories (entrées, plats, pastas, pizzas, etc.) are already in your data and will be used as fallback.
+  // ——— Desserts (Composez votre glace)
+  "ice-chantilly": { name: "Crème Chantilly", desc: "" },
+  "ice-1-boule": { name: "1 Boule de Glace", desc: "" },
+  "ice-2-boules": { name: "2 Boules de Glace", desc: "" },
+  "ice-3-boules": { name: "3 Boules de Glace", desc: "" },
+  "ice-4-boules": { name: "4 Boules de Glace", desc: "" },
+  "ice-500g": { name: "½ kg de Glace", desc: "" },
+  "ice-1kg": { name: "1 kg de Glace", desc: "" },
+  "ice-tarte": { name: "Tarte Glacée", desc: "" }
 };
 
-/** English culinary translations */
+/** ENGLISH culinary translations */
 const ITEMS_EN: ItemsTextPack = {
-// ——— Drinks (Matcha)
-"matcha-latte": { name: "Matcha Latte / Iced", desc: "Ceremonial matcha with your choice of milk" },
-"matcha-coco": { name: "Coconut Matcha", desc: "Matcha blended with creamy coconut milk" },
-"matcha-pink-foam": { name: "Pink Foam Matcha", desc: "Matcha topped with a sweet pink foam" },
-"matcha-fraise": { name: "Strawberry Matcha", desc: "Matcha infused with fresh strawberry" },
-"matcha-mangue": { name: "Mango Matcha", desc: "Matcha mixed with ripe mango" },
+  // ——— Drinks (Matcha)
+  "matcha-latte": { name: "Matcha Latte", desc: "Matcha with Milk (Hot/Iced)" },
+  "matcha-coco": { name: "Coco Matcha", desc: "Coconut water with matcha foam" },
+  "matcha-pink-foam": { name: "Pink Foam Matcha", desc: "Matcha Topped with Strawberry Foam" },
+  "matcha-fraise": { name: "Strawberry Matcha", desc: "Matcha with Strawberry Purée" },
+  "matcha-mangue": { name: "Mango Matcha", desc: "Matcha with Mango Purée" },
+  "milk-options": { name: "Milk Options", desc: "Oats or Coconut Milk" },
 
-// ——— Drinks (Coffee & Specialties)
-"coffee-coco-latte": { name: "Coconut Latte", desc: "Espresso with smooth coconut milk" },
-"coffee-creme-brulee-latte": { name: "Crème Brûlée Latte", desc: "Sweet latte with a caramelized crunch" },
-"coffee-spanish-latte": { name: "Spanish Latte", desc: "A sweetened latte in Spanish style" },
-"coffee-saffron-latte": { name: "Saffron Latte", desc: "Latte infused with aromatic saffron" },
+  // ——— Drinks (Coffee & Specialties)
+  "coffee-coco-latte": { name: "Coco Latte", desc: "Coconut water with coffee foam" },
+  "coffee-creme-brulee-latte": { name: "Crème Brûlée Latte", desc: "Iced coffee topped with crème brûlée" },
+  "coffee-spanish-latte": { name: "Spanish Latte", desc: "Condensed milk with espresso shot" },
+  "coffee-saffron-latte": { name: "Saffron Latte", desc: "Saffron with turmeric milk and espresso shot" },
+  "milk-options1": { name: "Milk Options", desc: "Oats or Coconut Milk" },
 
-// ——— Drinks (Refreshers)
-"refresher-hibiscus": { name: "Iced Hibiscus", desc: "Chilled hibiscus infusion" },
-"refresher-hibiscus-peche": { name: "Peach Hibiscus", desc: "Hibiscus tea with peach" },
-"refresher-tropical-ginger": { name: "Tropical Ginger", desc: "Ginger with exotic fruits" },
-"refresher-watermelon-fizz": { name: "Watermelon Fizz", desc: "Sparkling watermelon cooler" },
+  // ——— Drinks (Refreshers)
+  "refresher-hibiscus": { name: "Hibiscus", desc: "House-brewed hibiscus" },
+  "refresher-hibiscus-peche": { name: "Hibiscus Peach", desc: "Hibiscus tea with a peachy finish" },
+  "refresher-tropical-ginger": { name: "Tropical Ginger", desc: "Mango and ginger in a spicy fusion" },
+  "refresher-watermelon-fizz": { name: "Watermelon Fizz", desc: "Watermelon blended with fizzy soda" },
 
-// ——— Drinks (Smoothies)
-"smoothie-multivitamine": { name: "Multivitamin Smoothie", desc: "Mixed seasonal fruits" },
-"smoothie-california-dream": { name: "California Dream", desc: "Tropical fruit blend" },
-"smoothie-jack-special": { name: "Jack’s Special", desc: "Our house signature mix" },
-"smoothie-coco-mango": { name: "Coco Mango", desc: "Coconut and mango smoothie" },
-"smoothie-bananasa": { name: "Bananasa", desc: "Banana with your choice of milk" },
+  // ——— Drinks (Smoothies)
+  "smoothie-multivitamine": { name: "Multivitamine", desc: "Orange pineapple kiwi and mango" },
+  "smoothie-california-dream": { name: "California Dream", desc: "Orange strawberry banana kiwi and yoghurt" },
+  "smoothie-jack-special": { name: "Jack Special", desc: "Strawberry pineapple and lemon" },
+  "smoothie-coco-mango": { name: "Coco Mango", desc: "Mango banana and coconut milk" },
+  "smoothie-bananasa": { name: "Bananasa", desc: "Banana pineapple lemon and mint syrup" },
 
-// ——— Drinks (Creamy Red Bull)
-"creamy-redbull-blueberry": { name: "Creamy Blueberry Red Bull", desc: "Energy drink with cream and blueberry" },
-"creamy-redbull-strawberry": { name: "Creamy Strawberry Red Bull", desc: "Energy drink with cream and strawberry" },
-"creamy-redbull-peach": { name: "Creamy Peach Red Bull", desc: "Energy drink with cream and peach" },
+  // ——— Drinks (Creamy Red Bull)
+  "creamy-redbull-blueberry": { name: "Blueberry Creamy Redbull", desc: "Blueberry coco with heavy cream" },
+  "creamy-redbull-strawberry": { name: "Strawberry Creamy Redbull", desc: "Strawberry with heavy cream" },
+  "creamy-redbull-peach": { name: "Peach Creamy Redbull", desc: "Peach with heavy cream" },
 
+  // ——— Drinks (Mojitos – Non-Alcoholic)
+  "mojito-green": { name: "Green Mojito", desc: "" },
+  "mojito-strawberry": { name: "Strawberry Mojito", desc: "" },
+  "mojito-passion": { name: "Passion Fruit Mojito", desc: "" },
+  "mojito-redbull": { name: "Redbull Mojito", desc: "" },
+  "mojito-strawberry-bull": { name: "Strawberry Bull Mojito", desc: "" },
+  "mojito-black": { name: "Black Mojito", desc: "" },
 
-// ——— Drinks (Mojitos – Non-Alcoholic)
-"mojito-green": { name: "Classic Mojito", desc: "Lime, mint and sparkling soda" },
-"mojito-strawberry": { name: "Strawberry Mojito", desc: "Strawberry, lime and mint" },
-"mojito-passion": { name: "Passion Fruit Mojito", desc: "Passion fruit, mint and soda" },
-"mojito-redbull": { name: "Red Bull Mojito", desc: "Red Bull with lime and mint" },
-"mojito-strawberry-bull": { name: "Strawberry Bull Mojito", desc: "Red Bull with strawberry and mint" },
-"mojito-black": { name: "Dark Mojito", desc: "Brown sugar with mint and soda" },
+  // ——— Drinks (Iced Teas)
+  "icedtea-raspberry": { name: "Raspberry Iced Tea", desc: "Cold-brewed raspberry infusion" },
+  "icedtea-lemon": { name: "Lemon Iced Tea", desc: "Cold-brewed lemon infusion" },
 
-// ——— Drinks (Iced Teas)
-"icedtea-raspberry": { name: "Raspberry Iced Tea", desc: "Cold-brewed raspberry infusion" },
-"icedtea-lemon": { name: "Lemon Iced Tea", desc: "Cold-brewed lemon infusion" },
+  // ——— Drinks (Mocktails – Non-Alcoholic Cocktails)
+  "mocktail-florida": { name: "Florida", desc: "" },
+  "mocktail-bora-bora": { name: "Bora Bora", desc: "" },
+  "mocktail-pinacolada": { name: "Piña Colada", desc: "" },
+  "mocktail-ocean-11": { name: "Ocean 11", desc: "" },
 
-// ——— Drinks (Mocktails – Non-Alcoholic Cocktails)
-"mocktail-florida": { name: "Florida", desc: "Citrus fruits with a sparkling twist" },
-"mocktail-bora-bora": { name: "Bora Bora", desc: "Pineapple and coconut blend" },
-"mocktail-pinacolada": { name: "Piña Colada", desc: "Classic mix of coconut and pineapple" },
-"mocktail-ocean-11": { name: "Ocean 11", desc: "Blueberry and citrus fusion" },
+  // ——— Drinks (Juices)
+  "juice-orange": { name: "Orange Juice", desc: "" },
+  "juice-lemon": { name: "Lemon Juice", desc: "" },
+  "juice-lemon-mint": { name: "Lemon Mint", desc: "" },
+  "juice-carrot": { name: "Carrot Juice", desc: "" },
+  "juice-banana": { name: "Banana Juice", desc: "" },
+  "juice-strawberry": { name: "Strawberry Juice", desc: "" },
+  "juice-apple": { name: "Apple Juice", desc: "" },
+  "juice-peach": { name: "Peach Juice", desc: "" },
+  "juice-avocado": { name: "Avocado Juice", desc: "" },
+  "juice-mango": { name: "Mango Juice", desc: "" },
+  "juice-pineapple": { name: "Pineapple Juice", desc: "" },
+  "juice-kiwi": { name: "Kiwi Juice", desc: "" },
 
-// ——— Drinks (Juices)
-"juice-orange": { name: "Orange Juice", desc: "Freshly squeezed or nectar" },
-"juice-lemon": { name: "Lemon Juice", desc: "Fresh lemon juice" },
-"juice-lemon-mint": { name: "Lemon Mint", desc: "Fresh lemon with mint" },
-"juice-carrot": { name: "Carrot Juice", desc: "Fresh carrot juice" },
-"juice-banana": { name: "Banana Juice", desc: "Banana blended with milk" },
-"juice-strawberry": { name: "Strawberry Juice", desc: "Fresh strawberry blend" },
-"juice-apple": { name: "Apple Juice", desc: "Sweet apple juice" },
-"juice-peach": { name: "Peach Juice", desc: "Peach nectar" },
-"juice-avocado": { name: "Avocado Juice", desc: "Smooth and creamy avocado" },
-"juice-mango": { name: "Mango Juice", desc: "Ripe mango juice" },
-"juice-pineapple": { name: "Pineapple Juice", desc: "Tropical pineapple juice" },
-"juice-kiwi": { name: "Kiwi Juice", desc: "Tangy kiwi juice" },
+  // ——— Drinks (Cold-Pressed Juices)
+  "pressed-apple": { name: "Cold-Pressed Apple", desc: "" },
+  "pressed-pineapple": { name: "Cold-Pressed Pineapple", desc: "" },
+  "pressed-carrot": { name: "Cold-Pressed Carrot", desc: "" },
+  "pressed-pomegranate": { name: "Cold-Pressed Pomegranate", desc: "" },
+  "pressed-watermelon": { name: "Cold-Pressed Watermelon", desc: "" },
 
-// ——— Drinks (Cold-Pressed Juices)
-"pressed-apple": { name: "Cold-Pressed Apple", desc: "Freshly pressed apple juice" },
-"pressed-pineapple": { name: "Cold-Pressed Pineapple", desc: "Freshly pressed pineapple juice" },
-"pressed-carrot": { name: "Cold-Pressed Carrot", desc: "Freshly pressed carrot juice" },
-"pressed-pomegranate": { name: "Cold-Pressed Pomegranate", desc: "Freshly pressed pomegranate juice" },
-"pressed-watermelon": { name: "Cold-Pressed Watermelon", desc: "Freshly pressed watermelon juice" },
+  // ——— Drinks (Cold Drinks)
+  "drink-water-33cl": { name: "Mineral Water 33cl", desc: "" },
+  "drink-water-50cl": { name: "Water 50cl", desc: "" },
+  "drink-soda": { name: "Soft Drinks", desc: "" },
+  "drink-iced-tea": { name: "Iced Tea (Lemon/Peach)", desc: "" },
+  "drink-beer-na": { name: "Non-Alcoholic Beer", desc: "" },
+  "drink-redbull": { name: "Red Bull", desc: "" },
 
-// ——— Drinks (Cold Drinks)
-"drink-water-33cl": { name: "Mineral Water 33cl", desc: "" },
-"drink-water-50cl": { name: "Mineral Water 50cl", desc: "" },
-"drink-soda": { name: "Soft Drinks", desc: "" },
-"drink-iced-tea": { name: "Iced Tea (Lemon/Peach)", desc: "" },
-"drink-beer-na": { name: "Non-Alcoholic Beer", desc: "" },
+  // ——— Drinks (Teas)
+  "tea-mint": { name: "Mint Tea", desc: "" },
+  "tea-american": { name: "American Tea", desc: "" },
+  "tea-infusion": { name: "Herbal Infusion", desc: "" },
+  "tea-black": { name: "Black Tea", desc: "" },
+  "tea-special": { name: "Special Tea", desc: "" },
+  "tea-black-special": { name: "Black Special Tea", desc: "" },
 
-// ——— Drinks (Teas)
-"tea-mint": { name: "Moroccan Mint Tea", desc: "" },
-"tea-american": { name: "American Tea", desc: "" },
-"tea-infusion": { name: "Herbal Infusion", desc: "" },
-"tea-black": { name: "Black Tea", desc: "" },
-"tea-special": { name: "House Special Tea", desc: "" },
-"tea-black-special": { name: "Premium Black Tea", desc: "" },
+  // ——— Drinks (Hot Drinks)
+  "hot-espresso": { name: "Espresso", desc: "" },
+  "hot-americano": { name: "Americano", desc: "" },
+  "hot-milk": { name: "Hot Milk", desc: "" },
+  "hot-nespresso": { name: "Nespresso", desc: "" },
+  "hot-capp-italian": { name: "Italian Cappuccino", desc: "With frothed milk" },
+  "hot-nespresso-creme": { name: "Nespresso Crème", desc: "" },
+  "hot-nespresso-double": { name: "Nespresso Double", desc: "" },
+  "hot-flavored": { name: "Flavored Coffee", desc: "Caramel / Hazelnut / Vanilla" },
+  "hot-cafe-creme": { name: "Café Crème", desc: "" },
+  "hot-nescafe-lait": { name: "Nescafé with Milk", desc: "" },
+  "hot-chocolate": { name: "Hot Chocolate", desc: "" },
+  "hot-capp-vanille-noisette": { name: "Cappuccino", desc: "Caramel, hazelnut, vanilla, whipped cream" },
+  "hot-royal": { name: "Royal Coffee", desc: "" },
+  "hot-double": { name: "Double Coffee", desc: "" },
+  "hot-choc-chantilly": { name: "Hot Chocolate with Whipped Cream", desc: "" },
+  "hot-latte-macchiato": { name: "Latte Macchiato", desc: "" },
+  "hot-bonbon": { name: "Café Bonbon", desc: "" },
 
-// ——— Drinks (Hot Drinks)
-"hot-espresso": { name: "Espresso", desc: "" },
-"hot-americano": { name: "Americano", desc: "" },
-"hot-milk": { name: "Hot Milk", desc: "" },
-"hot-nespresso": { name: "Nespresso", desc: "" },
-"hot-capp-italian": { name: "Italian Cappuccino", desc: "With frothed milk" },
-"hot-nespresso-creme": { name: "Nespresso Crème", desc: "" },
-"hot-nespresso-double": { name: "Double Nespresso", desc: "" },
-"hot-flavored": { name: "Flavored Coffee", desc: "Caramel / Hazelnut / Vanilla" },
-"hot-cafe-creme": { name: "Café Crème", desc: "" },
-"hot-nescafe-lait": { name: "Nescafé with Milk", desc: "" },
-"hot-chocolate": { name: "Hot Chocolate", desc: "" },
-"hot-capp-vanille-noisette": { name: "Vanilla & Hazelnut Cappuccino", desc: "With whipped cream" },
-"hot-royal": { name: "Royal Coffee", desc: "" },
-"hot-double": { name: "Double Coffee", desc: "" },
-"hot-choc-chantilly": { name: "Hot Chocolate with Whipped Cream", desc: "" },
-"hot-latte-macchiato": { name: "Latte Macchiato", desc: "" },
-"hot-bonbon": { name: "Café Bonbon", desc: "" },
+  // ——— Breakfast Formulas
+  "breakfast-formule-espagnole": { name: "Spanish Breakfast", desc: "2 eggs, bread basket, tomato purée, manchego cheese, garlic oil, hot drink, mini orange juice, mineral water" },
+  "breakfast-formule-marocaine": { name: "Moroccan Breakfast", desc: "Harcha, msemen, baghrir, wheat bread, spreads (butter, cheese, honey, amlou), hot drink, mini orange juice, mineral water" },
 
-// ——— Breakfast Formulas
-"breakfast-formule-espagnole": { name: "Spanish Breakfast", desc: "2 eggs, bread basket, tomato purée, manchego cheese, garlic oil, hot drink, mini orange juice, mineral water" },
-"breakfast-formule-marocaine": { name: "Moroccan Breakfast", desc: "Harcha, msemen, baghrir, wheat bread, spreads (butter, cheese, honey, amlou), hot drink, mini orange juice, mineral water" },
+  // ——— Bowls
+  "bowl-original-yogurt": { name: "Original Yogurt Bowl", desc: "Yogurt with granola, seasonal fruits and honey" },
+  "bowl-amlou-yogurt": { name: "Amlou Yogurt Bowl", desc: "Yogurt with granola, amlou, seasonal fruits and honey" },
+  "bowl-chia-pudding": { name: "Chia Pudding Bowl", desc: "Chia seeds with granola and seasonal fruits" },
 
-// ——— Bowls
-"bowl-original-yogurt": { name: "Original Yogurt Bowl", desc: "Yogurt with granola, seasonal fruits and honey" },
-"bowl-amlou-yogurt": { name: "Amlou Yogurt Bowl", desc: "Yogurt with granola, amlou, seasonal fruits and honey" },
-"bowl-chia-pudding": { name: "Chia Pudding Bowl", desc: "Chia seeds with granola and seasonal fruits" },
+  // ——— Tartines
+  "toast-avo-poached": { name: "Avocado & Poached Egg Toast", desc: "Avocado, poached egg, arugula" },
+  "toast-burrata": { name: "Burrata Toast", desc: "Burrata, cherry tomato, balsamic glaze, walnuts" },
+  "toast-figtastic": { name: "Figtastic Toast", desc: "Brie, figs, honey, walnuts" },
+  "toast-salmon": { name: "Smoked Salmon Toast", desc: "Smoked salmon, cream cheese, arugula, chili flakes" },
 
-// ——— Tartines
-"toast-avo-poached": { name: "Avocado & Poached Egg Toast", desc: "Avocado, poached egg, arugula" },
-"toast-burrata": { name: "Burrata Toast", desc: "Burrata, cherry tomato, balsamic glaze, walnuts" },
-"toast-figtastic": { name: "Figtastic Toast", desc: "Brie, figs, honey, walnuts" },
-"toast-salmon": { name: "Smoked Salmon Toast", desc: "Smoked salmon, cream cheese, arugula, chili flakes" },
+  // ——— Brioche Buns
+  "bun-egg": { name: "Egg Brioche Bun", desc: "Scrambled eggs, cheddar cheese" },
+  "bun-avo-herb": { name: "Avocado & Herb Brioche Bun", desc: "Scrambled eggs, avocado, cream cheese, cheddar" },
+  "bun-woods": { name: "Woods Brioche Bun", desc: "Scrambled eggs, cheddar, caramelized onions" },
 
-// ——— Brioche Buns
-"bun-egg": { name: "Egg Brioche Bun", desc: "Scrambled eggs, cheddar cheese" },
-"bun-avo-herb": { name: "Avocado & Herb Brioche Bun", desc: "Scrambled eggs, avocado, cream cheese, cheddar" },
-"bun-woods": { name: "Woods Brioche Bun", desc: "Scrambled eggs, cheddar, caramelized onions" },
+  // ——— Sandwiches
+  "sandwich-tunacado": { name: "Tunacado Sandwich", desc: "Avocado, tuna mousse, pesto, tomato" },
+  "sandwich-spicytuna": { name: "Spicy Tuna Sandwich", desc: "Tuna mousse, tomato, jalapeño, tabasco, pesto" },
+  "sandwich-mozacado": { name: "Mozacado Sandwich", desc: "Mozzarella, avocado, tomato, pesto" },
+  "sandwich-toast-hollandais": { name: "Dutch Toast", desc: "Hollandaise-style tartine" },
+  "sandwich-chicken-woods": { name: "Chicken Woods Sandwich", desc: "Grilled chicken, tomato, arugula, house sauce" },
+  "sandwich-chicken-parm": { name: "Chicken Parm Sandwich", desc: "Grilled chicken, aioli, tomato, parmesan" },
 
-// ——— Sandwiches
-"sandwich-tunacado": { name: "Tunacado Sandwich", desc: "Avocado, tuna mousse, pesto, tomato" },
-"sandwich-spicytuna": { name: "Spicy Tuna Sandwich", desc: "Tuna mousse, tomato, jalapeño, tabasco, pesto" },
-"sandwich-mozacado": { name: "Mozacado Sandwich", desc: "Mozzarella, avocado, tomato, pesto" },
-"sandwich-toast-hollandais": { name: "Dutch Toast", desc: "Hollandaise-style tartine" },
-"sandwich-chicken-woods": { name: "Chicken Woods Sandwich", desc: "Grilled chicken, tomato, arugula, house sauce" },
-"sandwich-chicken-parm": { name: "Chicken Parm Sandwich", desc: "Grilled chicken, aioli, tomato, parmesan" },
+  // ——— Eggs
+  "egg-fried-1": { name: "1 Fried Egg", desc: "" },
+  "egg-fried-2": { name: "2 Fried Eggs", desc: "" },
+  "egg-fried-3": { name: "3 Fried Eggs", desc: "" },
+  "omelette-plain": { name: "Plain Omelette", desc: "Simple and fluffy" },
+  "omelette-cheese": { name: "Cheese Omelette", desc: "With melted cheese" },
+  "omelette-cheese-turkey": { name: "Cheese & Turkey Omelette", desc: "With cheese and turkey" },
+  "omelette-khlie": { name: "Khlie Omelette", desc: "Traditional Moroccan dried beef" },
+  "omelette-tuna": { name: "Tuna Omelette", desc: "With tuna" },
+  "omelette-shrimp": { name: "Shrimp Omelette", desc: "With sautéed shrimp" },
 
-// ——— Eggs
-"egg-fried-1": { name: "1 Fried Egg", desc: "" },
-"egg-fried-2": { name: "2 Fried Eggs", desc: "" },
-"egg-fried-3": { name: "3 Fried Eggs", desc: "" },
-"omelette-plain": { name: "Plain Omelette", desc: "Simple and fluffy" },
-"omelette-cheese": { name: "Cheese Omelette", desc: "With melted cheese" },
-"omelette-cheese-turkey": { name: "Cheese & Turkey Omelette", desc: "With cheese and turkey" },
-"omelette-khlie": { name: "Khlie Omelette", desc: "Traditional Moroccan dried beef" },
-"omelette-tuna": { name: "Tuna Omelette", desc: "With tuna" },
-"omelette-shrimp": { name: "Shrimp Omelette", desc: "With sautéed shrimp" },
+  // ——— À la Carte
+  "alacarte-chocolate-bread": { name: "Chocolate Croissant", desc: "Chocolate bread or croissant" },
+  "alacarte-turnover": { name: "Cheese or Almond Turnover", desc: "Flaky pastry filled with cheese or almonds" },
+  "alacarte-bread-plate": { name: "Bread Assortment", desc: "Wheat bread, harcha, msemen or baghrir with 2 spreads (butter, cream cheese, jam, olive oil, amlou, honey)" },
+  "alacarte-cheese-toast": { name: "Cheese Toast", desc: "Toasted bread with melted cheese" },
+  "alacarte-turkey-cheese-toast": { name: "Turkey & Cheese Toast", desc: "Toasted bread with turkey and cheese" },
+  "alacarte-croque-cheese": { name: "Croque Cheese", desc: "Classic cheese croque" },
+  "alacarte-baghrir-amlou": { name: "Baghrir with Amlou", desc: "Moroccan semolina pancakes with amlou" },
+  "alacarte-croque-turkey-cheese": { name: "Croque Turkey & Cheese", desc: "Croque filled with turkey and cheese" },
+  "alacarte-khlie-eggs": { name: "Khlie with 2 Eggs", desc: "Traditional dried beef served with 2 eggs" },
 
-// ——— À la Carte
-"alacarte-chocolate-bread": { name: "Chocolate Croissant", desc: "Chocolate bread or croissant" },
-"alacarte-turnover": { name: "Cheese or Almond Turnover", desc: "Flaky pastry filled with cheese or almonds" },
-"alacarte-bread-plate": { name: "Bread Assortment", desc: "Wheat bread, harcha, msemen or baghrir with 2 spreads (butter, cream cheese, jam, olive oil, amlou, honey)" },
-"alacarte-cheese-toast": { name: "Cheese Toast", desc: "Toasted bread with melted cheese" },
-"alacarte-turkey-cheese-toast": { name: "Turkey & Cheese Toast", desc: "Toasted bread with turkey and cheese" },
-"alacarte-croque-cheese": { name: "Croque Cheese", desc: "Classic cheese croque" },
-"alacarte-baghrir-amlou": { name: "Baghrir with Amlou", desc: "Moroccan semolina pancakes with amlou" },
-"alacarte-croque-turkey-cheese": { name: "Croque Turkey & Cheese", desc: "Croque filled with turkey and cheese" },
-"alacarte-khlie-eggs": { name: "Khlie with 2 Eggs", desc: "Traditional dried beef served with 2 eggs" },
+  // ——— Dutch Toast Variations
+  "toast-amsterdam": { name: "Amsterdam Toast", desc: "Dutch-style toast" },
+  "toast-rotterdam": { name: "Rotterdam Toast", desc: "Dutch-style toast" },
 
-// ——— Dutch Toast Variations
-"toast-amsterdam": { name: "Amsterdam Toast", desc: "Dutch-style toast" },
-"toast-rotterdam": { name: "Rotterdam Toast", desc: "Dutch-style toast" },
+  // ——— Kids Formula
+  "kids-formula-1": { name: "Kids Formula I", desc: "Baghrir with amlou, mini chocolate pancakes, cornflakes, choice of cold chocolate milk or hot milk" },
+  "kids-formula-2": { name: "Kids Formula II", desc: "Chocolate pancake, cornflakes, choice of cold chocolate milk or hot milk" },
 
-// ——— Kids Formula
-"kids-formula-1": { name: "Kids Formula I", desc: "Baghrir with amlou, mini chocolate pancakes, cornflakes, choice of cold chocolate milk or hot milk" },
-"kids-formula-2": { name: "Kids Formula II", desc: "Chocolate pancake, cornflakes, choice of cold chocolate milk or hot milk" },
-// ——— Starters (Cold)
-"salade-marocaine": { name: "Moroccan Salad", desc: "" },
-"salade-nicoise": { name: "Niçoise Salad", desc: "" },
-"salade-cesar": { name: "Caesar Salad", desc: "" },
-"salade-exotique": { name: "Exotic Salad", desc: "" },
-"salade-avocat-crevettes": { name: "Avocado & Shrimp Salad", desc: "" },
-"salade-marine": { name: "Seafood Salad", desc: "" },
-"salade-woods": { name: "Woods Signature Salad", desc: "Quinoa, mango, kiwi, pineapple, avocado, shrimp, smoked salmon" },
+  // ——— Starters (Cold)
+  "salade-marocaine": { name: "Moroccan Salad", desc: "" },
+  "salade-nicoise": { name: "Niçoise Salad", desc: "" },
+  "salade-cesar": { name: "Caesar Salad", desc: "" },
+  "salade-exotique": { name: "Exotic Salad", desc: "" },
+  "salade-avocat-crevettes": { name: "Avocado & Shrimp Salad", desc: "" },
+  "salade-marine": { name: "Seafood Salad", desc: "" },
+  "salade-woods": { name: "Woods Signature Salad", desc: "Quinoa, mango, kiwi, pineapple, avocado, shrimp, smoked salmon" },
 
-// ——— Starters (Hot)
-"soupe-fruits-de-mer": { name: "Seafood Soup", desc: "" },
-"creme-legumes": { name: "Vegetable Cream Soup", desc: "" },
-"gratin-fruits-de-mer": { name: "Seafood Gratin", desc: "" },
-"pilpil-crevettes": { name: "Pil-Pil Shrimp", desc: "" },
+  // ——— Starters (Hot)
+  "soupe-fruits-de-mer": { name: "Seafood Soup", desc: "" },
+  "creme-legumes": { name: "Vegetable Cream Soup", desc: "" },
+  "gratin-fruits-de-mer": { name: "Seafood Gratin", desc: "" },
+  "pilpil-crevettes": { name: "Pil-Pil Shrimp", desc: "" },
 
-// ——— Mains: Fish
-"merlan": { name: "Fried Whiting Fillet", desc: "" },
-"crevettes-grillees": { name: "Grilled Shrimp", desc: "" },
-"thon": { name: "Tuna Fillet", desc: "" },
-"espadon": { name: "Grilled Swordfish Fillet", desc: "" },
-"saumon-papillote": { name: "Salmon en Papillote", desc: "" },
-"friture-1p": { name: "Fried Fish Menu (1 person)", desc: "Starter, main course & dessert" },
-"friture-2p": { name: "Fried Fish Menu (2 people)", desc: "Starter, main course & dessert" },
+  // ——— Mains: Fish
+  "merlan": { name: "Fried Whiting Fillet", desc: "" },
+  "crevettes-grillees": { name: "Grilled Shrimp", desc: "" },
+  "thon": { name: "Tuna Fillet", desc: "" },
+  "espadon": { name: "Grilled Swordfish Fillet", desc: "" },
+  "saumon-papillote": { name: "Salmon en Papillote", desc: "" },
+  "friture-1p": { name: "Fried Fish Menu (1 person)", desc: "Starter, main course & dessert" },
+  "friture-2p": { name: "Fried Fish Menu (2 people)", desc: "Starter, main course & dessert" },
 
-// ——— Mains: Meat & Poultry
-"emince-poulet": { name: "Sautéed Chicken Strips", desc: "" },
-"brochettes-poulet": { name: "Chicken Skewers", desc: "" },
-"filet-poulet": { name: "Grilled Chicken Fillet", desc: "" },
-"mixed-grill": { name: "Mixed Grill", desc: "" },
-"emince-boeuf": { name: "Sautéed Beef Strips", desc: "" },
-"stroganoff": { name: "Beef Stroganoff", desc: "" },
-"entrecote": { name: "Entrecôte Steak", desc: "" },
-"filet-boeuf": { name: "Beef Tenderloin", desc: "" },
+  // ——— Mains: Meat & Poultry
+  "emince-poulet": { name: "Sautéed Chicken Strips", desc: "" },
+  "brochettes-poulet": { name: "Chicken Skewers", desc: "" },
+  "filet-poulet": { name: "Grilled Chicken Fillet", desc: "" },
+  "mixed-grill": { name: "Mixed Grill", desc: "" },
+  "emince-boeuf": { name: "Sautéed Beef Strips", desc: "" },
+  "stroganoff": { name: "Beef Stroganoff", desc: "" },
+  "entrecote": { name: "Entrecôte Steak", desc: "" },
+  "filet-boeuf": { name: "Beef Tenderloin", desc: "" },
 
-// ——— Moroccan Dishes
-"tajine-viande-hachee": { name: "Minced Meat Tagine", desc: "" },
-"tajine-pruneaux": { name: "Beef Tagine with Prunes", desc: "" },
-"tajine-coquelet-citron": { name: "Baby Chicken Tagine with Preserved Lemon", desc: "" },
-"tangia": { name: "Tangia Marrakchia", desc: "" },
-"pastilla-poulet": { name: "Chicken Pastilla", desc: "" },
-"pastilla-poisson": { name: "Fish Pastilla", desc: "" },
-"couscous-veg": { name: "Vegetarian Couscous (Friday)", desc: "" },
-"couscous-poulet": { name: "Chicken Couscous (Friday)", desc: "" },
-"couscous-viande": { name: "Beef Couscous (Friday)", desc: "" },
+  // ——— Moroccan Dishes
+  "tajine-viande-hachee": { name: "Minced Meat Tagine", desc: "" },
+  "tajine-pruneaux": { name: "Beef Tagine with Prunes", desc: "" },
+  "tajine-coquelet-citron": { name: "Baby Chicken Tagine with Preserved Lemon", desc: "" },
+  "tangia": { name: "Tangia Marrakchia", desc: "" },
+  "pastilla-poulet": { name: "Chicken Pastilla", desc: "" },
+  "pastilla-poisson": { name: "Fish Pastilla", desc: "" },
+  "couscous-veg": { name: "Vegetarian Couscous (Friday)", desc: "" },
+  "couscous-poulet": { name: "Chicken Couscous (Friday)", desc: "" },
+  "couscous-viande": { name: "Beef Couscous (Friday)", desc: "" },
 
-// ——— Pastas
-"pasta-annalisa": { name: "Pasta alla Annalisa", desc: "" },
-"pasta-carbonara": { name: "Spaghetti alla Carbonara", desc: "Smoked turkey, carbonara sauce, parmesan" },
-"linguine-scampi": { name: "Linguine Scampi", desc: "Shrimp sautéed with butter, garlic & lemon" },
-"pasta-bolognaise": { name: "Spaghetti Bolognese", desc: "Rich meat sauce with basil & parmesan" },
-"farfalle-crema-gamberi": { name: "Farfalle with Cream & Shrimp", desc: "" },
-"pasta-pollo": { name: "Pasta al Pollo", desc: "Chicken, fresh cream, basil, parmesan" },
-"pasta-pollo-pesto": { name: "Chicken Pesto Penne", desc: "Penne with chicken, pesto, basil" },
-"pasta-tonno": { name: "Tuna Pasta", desc: "Tuna, tomato, onion, olives, parmesan" },
-"pasta-casa": { name: "House Pasta", desc: "" },
-"pasta-frutti-di-mare": { name: "Seafood Pasta", desc: "Seafood with sauce of your choice, parmesan" },
-"lasagnes-bolognaise": { name: "Lasagna Bolognese", desc: "" },
-"pasta-arrabiata": { name: "Penne Arrabbiata", desc: "Spicy tomato sauce with garlic and basil" },
-"spaghetti-noir-mer": { name: "Black Spaghetti with Seafood", desc: "With sauce of your choice, parmesan" },
+  // ——— Pastas
+  "pasta-annalisa": { name: "Pasta alla Annalisa", desc: "" },
+  "pasta-carbonara": { name: "Spaghetti alla Carbonara", desc: "Smoked turkey, carbonara sauce, parmesan" },
+  "linguine-scampi": { name: "Linguine Scampi", desc: "Shrimp sautéed with butter, garlic & lemon" },
+  "pasta-bolognaise": { name: "Spaghetti Bolognese", desc: "Rich meat sauce with basil & parmesan" },
+  "farfalle-crema-gamberi": { name: "Farfalle with Cream & Shrimp", desc: "" },
+  "pasta-pollo": { name: "Pasta al Pollo", desc: "Chicken, fresh cream, basil, parmesan" },
+  "pasta-pollo-pesto": { name: "Chicken Pesto Penne", desc: "Penne with chicken, pesto, basil" },
+  "pasta-tonno": { name: "Tuna Pasta", desc: "Tuna, tomato, onion, olives, parmesan" },
+  "pasta-casa": { name: "House Pasta", desc: "" },
+  "pasta-frutti-di-mare": { name: "Seafood Pasta", desc: "Seafood with sauce of your choice, parmesan" },
+  "lasagnes-bolognaise": { name: "Lasagna Bolognese", desc: "" },
+  "pasta-arrabiata": { name: "Penne Arrabbiata", desc: "Spicy tomato sauce with garlic and basil" },
+  "spaghetti-noir-mer": { name: "Black Spaghetti with Seafood", desc: "With sauce of your choice, parmesan" },
 
-// ——— Pizzas
-"pz-margherita": { name: "Margherita", desc: "Tomato, mozzarella, black olives" },
-"pz-frutti": { name: "Frutti di Mare", desc: "Tomato, mozzarella, calamari, shrimp, surimi, mussels, black olives" },
-"pz-primavera": { name: "Primavera", desc: "Tomato, mozzarella, eggplant, zucchini, mushrooms, bell pepper, onion, cherry tomato" },
-"pz-4formaggi": { name: "Quattro Formaggi", desc: "Tomato, mozzarella, edam, blue cheese, parmesan" },
-"pz-prosciutto": { name: "Prosciutto", desc: "Tomato, mozzarella, smoked turkey" },
-"pz-diavola": { name: "Diavola", desc: "Tomato, mozzarella, pepperoni, black olives" },
-"pz-tonno": { name: "Al Tonno", desc: "Tomato, mozzarella, tuna, onions, bell pepper, black olives" },
-"pz-4stagioni": { name: "Quattro Stagioni", desc: "Tomato, mozzarella, ground beef, seafood, tuna, chicken, black olives" },
-"pz-pollo-griglia": { name: "Pollo alla Griglia", desc: "Tomato, mozzarella, grilled chicken, BBQ sauce" },
-"pz-royale-mixte": { name: "Royal Mix", desc: "Tomato, mozzarella, assorted toppings" },
-"pz-bolognaise": { name: "Bolognese", desc: "Tomato, mozzarella, minced beef, black olives" },
-"pz-woods": { name: "Woods Special", desc: "Tomato, swordfish, grey shrimp, tuna" },
-"pz-puttanesca": { name: "Puttanesca", desc: "Anchovies, capers, garlic, black olives" },
+  // ——— Pizzas
+  "pz-margherita": { name: "Margherita", desc: "Tomato, mozzarella, black olives" },
+  "pz-frutti": { name: "Frutti di Mare", desc: "Tomato, mozzarella, calamari, shrimp, surimi, mussels, black olives" },
+  "pz-primavera": { name: "Primavera", desc: "Tomato, mozzarella, eggplant, zucchini, mushrooms, bell pepper, onion, cherry tomato" },
+  "pz-4formaggi": { name: "Quattro Formaggi", desc: "Tomato, mozzarella, edam, blue cheese, parmesan" },
+  "pz-prosciutto": { name: "Prosciutto", desc: "Tomato, mozzarella, smoked turkey" },
+  "pz-diavola": { name: "Diavola", desc: "Tomato, mozzarella, pepperoni, black olives" },
+  "pz-tonno": { name: "Al Tonno", desc: "Tomato, mozzarella, tuna, onions, bell pepper, black olives" },
+  "pz-4stagioni": { name: "Quattro Stagioni", desc: "Tomato, mozzarella, ground beef, seafood, tuna, chicken, black olives" },
+  "pz-pollo-griglia": { name: "Pollo alla Griglia", desc: "Tomato, mozzarella, grilled chicken, BBQ sauce" },
+  "pz-royale-mixte": { name: "Royal Mix", desc: "Tomato, mozzarella, assorted toppings" },
+  "pz-bolognaise": { name: "Bolognese", desc: "Tomato, mozzarella, minced beef, black olives" },
+  "pz-woods": { name: "Woods Special", desc: "Tomato, swordfish, grey shrimp, tuna" },
+  "pz-puttanesca": { name: "Puttanesca", desc: "Anchovies, capers, garlic, black olives" },
 
-// ——— Starters (Apéritifs)
-"onion-rings-4": { name: "Onion Rings (4 pcs)", desc: "" },
-"onion-rings-6": { name: "Onion Rings (6 pcs)", desc: "" },
-"onion-rings-9": { name: "Onion Rings (9 pcs)", desc: "" },
-"mozza-sticks-4": { name: "Mozzarella Sticks (4 pcs)", desc: "" },
-"mozza-sticks-6": { name: "Mozzarella Sticks (6 pcs)", desc: "" },
-"mozza-sticks-9": { name: "Mozzarella Sticks (9 pcs)", desc: "" },
-"jalapenos-cheddar-4": { name: "Cheddar Jalapeños (4 pcs)", desc: "" },
-"jalapenos-cheddar-6": { name: "Cheddar Jalapeños (6 pcs)", desc: "" },
-"jalapenos-cheddar-9": { name: "Cheddar Jalapeños (9 pcs)", desc: "" },
+  // ——— Starters (Apéritifs)
+  "onion-rings-4": { name: "Onion Rings (4 pcs)", desc: "" },
+  "onion-rings-6": { name: "Onion Rings (6 pcs)", desc: "" },
+  "onion-rings-9": { name: "Onion Rings (9 pcs)", desc: "" },
+  "mozza-sticks-4": { name: "Mozzarella Sticks (4 pcs)", desc: "" },
+  "mozza-sticks-6": { name: "Mozzarella Sticks (6 pcs)", desc: "" },
+  "mozza-sticks-9": { name: "Mozzarella Sticks (9 pcs)", desc: "" },
+  "jalapenos-cheddar-4": { name: "Cheddar Jalapeños (4 pcs)", desc: "" },
+  "jalapenos-cheddar-6": { name: "Cheddar Jalapeños (6 pcs)", desc: "" },
+  "jalapenos-cheddar-9": { name: "Cheddar Jalapeños (9 pcs)", desc: "" },
 
-// ——— Tex-Mex
-"nuggets-4": { name: "Chicken Nuggets (4 pcs)", desc: "" },
-"nuggets-6": { name: "Chicken Nuggets (6 pcs)", desc: "" },
-"nuggets-9": { name: "Chicken Nuggets (9 pcs)", desc: "" },
-"drumsticks-4": { name: "Chicken Drumsticks (4 pcs)", desc: "" },
-"drumsticks-6": { name: "Chicken Drumsticks (6 pcs)", desc: "" },
-"jalapenos-bites-4": { name: "Jalapeño Bites (4 pcs)", desc: "" },
-"jalapenos-bites-6": { name: "Jalapeño Bites (6 pcs)", desc: "" },
-"jalapenos-bites-9": { name: "Jalapeño Bites (9 pcs)", desc: "" },
+  // ——— Tex-Mex
+  "nuggets-4": { name: "Chicken Nuggets (4 pcs)", desc: "" },
+  "nuggets-6": { name: "Chicken Nuggets (6 pcs)", desc: "" },
+  "nuggets-9": { name: "Chicken Nuggets (9 pcs)", desc: "" },
+  "drumsticks-4": { name: "Chicken Drumsticks (4 pcs)", desc: "" },
+  "drumsticks-6": { name: "Chicken Drumsticks (6 pcs)", desc: "" },
+  "jalapenos-bites-4": { name: "Jalapeño Bites (4 pcs)", desc: "" },
+  "jalapenos-bites-6": { name: "Jalapeño Bites (6 pcs)", desc: "" },
+  "jalapenos-bites-9": { name: "Jalapeño Bites (9 pcs)", desc: "" },
 
-// ——— Burgers
-"burger-chicken": { name: "Chicken Burger", desc: "Chicken patty, cheddar cheese, lettuce, tomato" },
-"burger-cheese": { name: "Cheeseburger", desc: "Beef patty, lettuce, tomato" },
-"burger-double-cheese": { name: "Double Cheeseburger", desc: "Double beef, double cheddar, lettuce, tomato" },
-"burger-american": { name: "American Burger", desc: "Beef patty, fried egg, cheddar, lettuce, tomato" },
-"burger-cheese-jalapenos": { name: "Cheese Jalapeños Burger", desc: "Beef patty, lettuce, tomato, onion, chipotle mayo" },
-"burger-chicken-ananas": { name: "Pineapple Chicken Burger", desc: "Grilled chicken, lettuce, tomato, onion, mushrooms, pineapple" },
+  // ——— Burgers
+  "burger-chicken": { name: "Chicken Burger", desc: "Chicken patty, cheddar cheese, lettuce, tomato" },
+  "burger-cheese": { name: "Cheeseburger", desc: "Beef patty, lettuce, tomato" },
+  "burger-double-cheese": { name: "Double Cheeseburger", desc: "Double beef, double cheddar, lettuce, tomato" },
+  "burger-american": { name: "American Burger", desc: "Beef patty, fried egg, cheddar, lettuce, tomato" },
+  "burger-cheese-jalapenos": { name: "Cheese Jalapeños Burger", desc: "Beef patty, lettuce, tomato, onion, chipotle mayo" },
+  "burger-chicken-ananas": { name: "Pineapple Chicken Burger", desc: "Grilled chicken, lettuce, tomato, onion, mushrooms, pineapple" },
 
-// ——— Savory Crêpes
-"crepe-fromage": { name: "Cheese Crêpe", desc: "Cheese with béchamel sauce" },
-"crepe-thon": { name: "Tuna Crêpe", desc: "Tuna, cheese, oregano, tomato sauce" },
-"crepe-dinde-fromage": { name: "Turkey & Cheese Crêpe", desc: "Smoked turkey, cheese, egg, béchamel" },
-"crepe-poulet-champignons": { name: "Chicken & Mushroom Crêpe", desc: "Chicken, cheese, mushrooms, béchamel" },
-"crepe-viande-hachee": { name: "Minced Beef Crêpe", desc: "Ground beef, cheese, oregano, tomato sauce" },
-"crepe-mixte": { name: "Mixed Crêpe", desc: "Ground beef, chicken, smoked turkey, cheese, béchamel" },
+  // ——— Savory Crêpes
+  "crepe-fromage": { name: "Cheese Crêpe", desc: "Cheese with béchamel sauce" },
+  "crepe-thon": { name: "Tuna Crêpe", desc: "Tuna, cheese, oregano, tomato sauce" },
+  "crepe-dinde-fromage": { name: "Turkey & Cheese Crêpe", desc: "Smoked turkey, cheese, egg, béchamel" },
+  "crepe-poulet-champignons": { name: "Chicken & Mushroom Crêpe", desc: "Chicken, cheese, mushrooms, béchamel" },
+  "crepe-viande-hachee": { name: "Minced Beef Crêpe", desc: "Ground beef, cheese, oregano, tomato sauce" },
+  "crepe-mixte": { name: "Mixed Crêpe", desc: "Ground beef, chicken, smoked turkey, cheese, béchamel" },
 
-// ——— Tacos
-"tacos-poulet": { name: "Chicken Taco", desc: "" },
-"tacos-cordon-bleu": { name: "Cordon Bleu Taco", desc: "" },
-"tacos-viande": { name: "Beef Taco", desc: "" },
-"tacos-woods-mixte": { name: "Woods Mixed Taco", desc: "" },
+  // ——— Tacos
+  "tacos-poulet": { name: "Chicken Taco", desc: "" },
+  "tacos-cordon-bleu": { name: "Cordon Bleu Taco", desc: "" },
+  "tacos-viande": { name: "Beef Taco", desc: "" },
+  "tacos-woods-mixte": { name: "Woods Mixed Taco", desc: "" },
 
-// ——— Sandwiches & Panini
-"sandwich-fajitas-poulet": { name: "Chicken Fajita Sandwich", desc: "" },
-"sandwich-american-bbq": { name: "American BBQ Sandwich", desc: "Two grilled beef patties, egg, cheddar, lettuce, BBQ sauce" },
-"sandwich-woods": { name: "Woods Sandwich", desc: "Beef patty, chicken, cheddar, lettuce, sauce of choice" },
-"panini-classic-italien": { name: "Classic Italian Panini", desc: "Mozzarella, tomato, pesto, basil" },
-"panini-poulet-pesto": { name: "Chicken Pesto Panini", desc: "Grilled chicken, mozzarella, pesto, red pepper, onion" },
-"panini-tuna-melt": { name: "Tuna Melt Panini", desc: "Tuna salad with melted mozzarella" },
+  // ——— Sandwiches & Panini
+  "sandwich-fajitas-poulet": { name: "Chicken Fajita Sandwich", desc: "" },
+  "sandwich-american-bbq": { name: "American BBQ Sandwich", desc: "Two grilled beef patties, egg, cheddar, lettuce, BBQ sauce" },
+  "sandwich-woods": { name: "Woods Sandwich", desc: "Beef patty, chicken, cheddar, lettuce, sauce of choice" },
+  "panini-classic-italien": { name: "Classic Italian Panini", desc: "Mozzarella, tomato, pesto, basil" },
+  "panini-poulet-pesto": { name: "Chicken Pesto Panini", desc: "Grilled chicken, mozzarella, pesto, red pepper, onion" },
+  "panini-tuna-melt": { name: "Tuna Melt Panini", desc: "Tuna salad with melted mozzarella" },
 
-// ——— Sweet Crêpes / Waffles / Pancakes
-"sweet-crepe-simple": { name: "Sweet Crêpe / Waffle", desc: "" },
-"sweet-crepe-miel": { name: "Honey Crêpe / Waffle", desc: "" },
-"sweet-crepe-caramel": { name: "Caramel Crêpe / Waffle", desc: "" },
-"sweet-crepe-amlou": { name: "Amlou Crêpe / Waffle", desc: "" },
-"sweet-crepe-choco": { name: "Chocolate Crêpe / Waffle", desc: "" },
-"sweet-crepe-choco-banane": { name: "Chocolate Banana Crêpe / Waffle", desc: "" },
-"sweet-crepe-choco-blanc": { name: "White Chocolate Crêpe / Waffle", desc: "" },
-"sweet-crepe-nutella": { name: "Nutella Crêpe / Waffle", desc: "" },
-"sweet-crepe-black-white": { name: "Black & White Crêpe / Waffle", desc: "" },
-"sweet-crepe-nutella-noix": { name: "Nutella Walnut Crêpe / Waffle", desc: "" },
-"sweet-crepe-nutella-banane": { name: "Nutella Banana Crêpe / Waffle", desc: "" },
-"sweet-crepe-pistache": { name: "Pistachio Crêpe / Waffle", desc: "" },
-"sweet-crepe-mix": { name: "Oreo / Kinder / Lotus / KitKat Crêpe", desc: "" },
-"sweet-crepe-woods": { name: "Woods Crêpe", desc: "Nutella, walnuts, scoop of ice cream" },
+  // ——— Sweet Crêpes / Waffles / Pancakes
+  "sweet-crepe-simple": { name: "Sweet Crêpe / Waffle", desc: "" },
+  "sweet-crepe-miel": { name: "Honey Crêpe / Waffle", desc: "" },
+  "sweet-crepe-caramel": { name: "Caramel Crêpe / Waffle", desc: "" },
+  "sweet-crepe-amlou": { name: "Amlou Crêpe / Waffle", desc: "" },
+  "sweet-crepe-choco": { name: "Chocolate Crêpe / Waffle", desc: "" },
+  "sweet-crepe-choco-banane": { name: "Chocolate Banana Crêpe / Waffle", desc: "" },
+  "sweet-crepe-choco-blanc": { name: "White Chocolate Crêpe / Waffle", desc: "" },
+  "sweet-crepe-nutella": { name: "Nutella Crêpe / Waffle", desc: "" },
+  "sweet-crepe-black-white": { name: "Black & White Crêpe / Waffle", desc: "" },
+  "sweet-crepe-nutella-noix": { name: "Nutella Walnut Crêpe / Waffle", desc: "" },
+  "sweet-crepe-nutella-banane": { name: "Nutella Banana Crêpe / Waffle", desc: "" },
+  "sweet-crepe-pistache": { name: "Pistachio Crêpe / Waffle", desc: "" },
+  "sweet-crepe-mix": { name: "Oreo / Kinder / Lotus / KitKat Crêpe", desc: "" },
+  "sweet-crepe-woods": { name: "Woods Crêpe", desc: "Nutella, walnuts, scoop of ice cream" },
 
-"pancake-simple": { name: "Pancake", desc: "" },
-"pancake-miel": { name: "Honey Pancake", desc: "" },
-"pancake-caramel": { name: "Caramel Pancake", desc: "" },
-"pancake-amlou": { name: "Amlou Pancake", desc: "" },
-"pancake-choco": { name: "Chocolate Pancake", desc: "" },
-"pancake-choco-banane": { name: "Chocolate Banana Pancake", desc: "" },
-"pancake-choco-blanc": { name: "White Chocolate Pancake", desc: "" },
-"pancake-nutella": { name: "Nutella Pancake", desc: "" },
-"pancake-black-white": { name: "Black & White Pancake", desc: "" },
-"pancake-nutella-noix": { name: "Nutella Walnut Pancake", desc: "" },
-"pancake-nutella-banane": { name: "Nutella Banana Pancake", desc: "" },
-"pancake-pistache": { name: "Pistachio Pancake", desc: "" },
-"pancake-mix": { name: "Oreo / Kinder / Lotus / KitKat Pancake", desc: "" },
-"pancake-woods": { name: "Woods Pancake", desc: "Nutella, walnuts, scoop of ice cream" },
+  "pancake-simple": { name: "Pancake", desc: "" },
+  "pancake-miel": { name: "Honey Pancake", desc: "" },
+  "pancake-caramel": { name: "Caramel Pancake", desc: "" },
+  "pancake-amlou": { name: "Amlou Pancake", desc: "" },
+  "pancake-choco": { name: "Chocolate Pancake", desc: "" },
+  "pancake-choco-banane": { name: "Chocolate Banana Pancake", desc: "" },
+  "pancake-choco-blanc": { name: "White Chocolate Pancake", desc: "" },
+  "pancake-nutella": { name: "Nutella Pancake", desc: "" },
+  "pancake-black-white": { name: "Black & White Pancake", desc: "" },
+  "pancake-nutella-noix": { name: "Nutella Walnut Pancake", desc: "" },
+  "pancake-nutella-banane": { name: "Nutella Banana Pancake", desc: "" },
+  "pancake-pistache": { name: "Pistachio Pancake", desc: "" },
+  "pancake-mix": { name: "Oreo / Kinder / Lotus / KitKat Pancake", desc: "" },
+  "pancake-woods": { name: "Woods Pancake", desc: "Nutella, walnuts, scoop of ice cream" },
 
-// ——— Desserts
-"dess-patisserie": { name: "Pastry", desc: "" },
-"dess-fruit-salad-1": { name: "Fruit Salad (1 person)", desc: "" },
-"dess-fruit-salad-2": { name: "Fruit Salad (2 people)", desc: "" },
-"dess-fondant": { name: "Chocolate Fondant", desc: "With a scoop of ice cream" },
+  // ——— Desserts
+  "dess-patisserie": { name: "Pastry", desc: "" },
+  "dess-fruit-salad-1": { name: "Fruit Salad (1 person)", desc: "" },
+  "dess-fruit-salad-2": { name: "Fruit Salad (2 people)", desc: "" },
+  "dess-fondant": { name: "Chocolate Fondant", desc: "With a scoop of ice cream" },
 
-// ——— Frappuccino & Freakshake
-"frappuccino": { name: "Frappuccino", desc: "Choice of chocolate / caramel / vanilla / hazelnut" },
-"milkshake": { name: "Milkshake / Orange Shake", desc: "" },
-"freakshake": { name: "Freakshake", desc: "Oreo, Nutella, chocolate, caramel or cookies" },
+  // ——— Frappuccino & Freakshake
+  "frappuccino": { name: "Frappuccino", desc: "Choice of chocolate / caramel / vanilla / hazelnut" },
+  "milkshake": { name: "Milkshake / Orange Shake", desc: "" },
+  "freakshake": { name: "Freakshake", desc: "Oreo, Nutella, chocolate, caramel or cookies" },
 
-// ——— Ice Cream Sundaes
-"coupe-fruit-rouge": { name: "Red Fruit Sundae", desc: "Strawberry, cherry, whipped cream" },
-"coupe-rocher": { name: "Rocher Sundae", desc: "Ferrero Rocher with whipped cream" },
-"coupe-kitkat": { name: "KitKat Sundae", desc: "KitKat with whipped cream" },
-"coupe-banana-split": { name: "Banana Split", desc: "Vanilla, chocolate, strawberry, banana, whipped cream" },
-"coupe-fraise-melba": { name: "Strawberry Melba", desc: "Strawberries, vanilla ice cream, whipped cream" },
-"coupe-caraibes": { name: "Caribbean Sundae", desc: "Solero, strawberry, lemon, whipped cream" },
-"coupe-caramelo": { name: "Caramelo Sundae", desc: "Caramel, speculoos, whipped cream" },
-"coupe-bisutto": { name: "Bisutto Sundae", desc: "Speculoos, Oreo, cookies, whipped cream" },
-"coupe-negrisco": { name: "Negrisco Sundae", desc: "Chocolate, hazelnut, pistachio, whipped cream" },
-"coupe-exotique": { name: "Exotic Sundae", desc: "Pineapple, Solero, lemon, strawberry, fruit, whipped cream" },
-"coupe-woods": { name: "Woods Sundae", desc: "6 scoops of assorted ice cream & sorbet with whipped cream" },
+  // ——— Ice Cream Sundaes
+  "coupe-fruit-rouge": { name: "Red Fruit Sundae", desc: "Strawberry, cherry, whipped cream" },
+  "coupe-rocher": { name: "Rocher Sundae", desc: "Ferrero Rocher with whipped cream" },
+  "coupe-kitkat": { name: "KitKat Sundae", desc: "KitKat with whipped cream" },
+  "coupe-banana-split": { name: "Banana Split", desc: "Vanilla, chocolate, strawberry, banana, whipped cream" },
+  "coupe-fraise-melba": { name: "Strawberry Melba", desc: "Strawberries, vanilla ice cream, whipped cream" },
+  "coupe-caraibes": { name: "Caribbean Sundae", desc: "Solero, strawberry, lemon, whipped cream" },
+  "coupe-caramelo": { name: "Caramelo Sundae", desc: "Caramel, speculoos, whipped cream" },
+  "coupe-bisutto": { name: "Bisutto Sundae", desc: "Speculoos, Oreo, cookies, whipped cream" },
+  "coupe-negrisco": { name: "Negrisco Sundae", desc: "Chocolate, hazelnut, pistachio, whipped cream" },
+  "coupe-exotique": { name: "Exotic Sundae", desc: "Pineapple, Solero, lemon, strawberry, fruit, whipped cream" },
+  "coupe-woods": { name: "Woods Sundae", desc: "6 scoops of assorted ice cream & sorbet with whipped cream" },
 
-// ——— Build Your Own Ice Cream
-"ice-chantilly": { name: "Whipped Cream", desc: "" },
-"ice-1-boule": { name: "1 Scoop of Ice Cream", desc: "" },
-"ice-2-boules": { name: "2 Scoops of Ice Cream", desc: "" },
-"ice-3-boules": { name: "3 Scoops of Ice Cream", desc: "" },
-"ice-4-boules": { name: "4 Scoops of Ice Cream", desc: "" },
-"ice-500g": { name: "½ kg of Ice Cream", desc: "" },
-"ice-1kg": { name: "1 kg of Ice Cream", desc: "" },
-"ice-tarte": { name: "Ice Cream Tart", desc: "" },
-
-
+  // ——— Build Your Own Ice Cream
+  "ice-chantilly": { name: "Whipped Cream", desc: "" },
+  "ice-1-boule": { name: "1 Scoop of Ice Cream", desc: "" },
+  "ice-2-boules": { name: "2 Scoops of Ice Cream", desc: "" },
+  "ice-3-boules": { name: "3 Scoops of Ice Cream", desc: "" },
+  "ice-4-boules": { name: "4 Scoops of Ice Cream", desc: "" },
+  "ice-500g": { name: "½ kg of Ice Cream", desc: "" },
+  "ice-1kg": { name: "1 kg of Ice Cream", desc: "" },
+  "ice-tarte": { name: "Ice Cream Tart", desc: "" }
 };
-
-/** Dutch culinary translations */
+/** DUTCH culinary translations */
 const ITEMS_NL: ItemsTextPack = {
   
 // ——— Dranken (Matcha)
@@ -1390,12 +1383,15 @@ export const MENU_ITEMS: MenuItem[] = [
     { id: "matcha-pink-foam", price: 60, category: "drinks", subcategory: "Matcha" },
     { id: "matcha-fraise", price: 55, category: "drinks", subcategory: "Matcha" },
     { id: "matcha-mangue", price: 55, category: "drinks", subcategory: "Matcha" },
+    { id: "milk-options", price: 5, category: "drinks", subcategory: "Matcha" },
+
   
     // CAFÉ & SPÉCIALITÉS
     { id: "coffee-coco-latte", price: 60, category: "drinks", subcategory: "Café & Spécialités" },
     { id: "coffee-creme-brulee-latte", price: 65, category: "drinks", subcategory: "Café & Spécialités" },
     { id: "coffee-spanish-latte", price: 50, category: "drinks", subcategory: "Café & Spécialités" },
     { id: "coffee-saffron-latte", price: 65, category: "drinks", subcategory: "Café & Spécialités" },
+    { id: "milk-options1", price: 5, category: "drinks", subcategory: "Café & Spécialités" },
   
     // RAFRAÎCHISSANTS
     { id: "refresher-hibiscus", price: 49, category: "drinks", subcategory: "Rafraîchissants" },
@@ -1628,7 +1624,7 @@ export const MENU_ITEMS: MenuItem[] = [
               { id: "pz-diavola", price: 82, category: "pizzas", subcategory: "Pizzas" },
               { id: "pz-tonno", price: 72, category: "pizzas", subcategory: "Pizzas" },
               { id: "pz-4stagioni", price: 85, category: "pizzas", subcategory: "Pizzas" },
-              { id: "pz-pollo-griglia", price: 80, category: "pizzas", subcategory: "pizzas" },
+              { id: "pz-pollo-griglia", price: 80, category: "pizzas", subcategory: "Pizzas" },
               { id: "pz-royale-mixte", price: 85, category: "pizzas", subcategory: "Pizzas" },
               { id: "pz-bolognaise", price: 80, category: "pizzas", subcategory: "Pizzas" },
               { id: "pz-woods", price: 105, category: "pizzas", subcategory: "Pizzas" },
