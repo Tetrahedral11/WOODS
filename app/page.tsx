@@ -1357,7 +1357,7 @@ const ITEMS_NL: ItemsTextPack = {
   "ice-tarte": { name: "Ijstaart", desc: "" }
 };
 
-export default ITEMS_NL;
+
 
 /* ============================================================================
    5) Language registry (category/sub labels + item maps)
