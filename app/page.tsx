@@ -2021,7 +2021,7 @@ export default function WoodsSite() {
 
                 {/* Snapchat */}
                 <a
-                  href="https://www.snapchat.com/@woodstanger"
+                  href="https://www.snapchat.com/@woods.tanger"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-seafoam transition-colors"
