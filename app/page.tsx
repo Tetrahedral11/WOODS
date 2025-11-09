@@ -329,8 +329,8 @@ const ITEMS_FR: ItemsTextPack = {
   "mojito-black": { name: "Mojito Noir", desc: "" },
 
   // ——— Drinks (Thés glacés)
-  "icedtea-raspberry": { name: "Thé Glacé Framboise", desc: "Infusion froide de framboise" },
-  "icedtea-lemon": { name: "Thé Glacé Citron", desc: "Infusion froide de citron" },
+  "icedtea-raspberry": { name: "Thé Glacé Framboise", desc: "" },
+  "icedtea-lemon": { name: "Thé Glacé Citron", desc: "" },
 
   // ——— Drinks (Cocktails sans alcool)
   "mocktail-florida": { name: "Florida", desc: "" },
@@ -363,7 +363,6 @@ const ITEMS_FR: ItemsTextPack = {
   "drink-water-33cl": { name: "Eau minérale 33 cl", desc: "" },
   "drink-water-50cl": { name: "Eau 50cl", desc: "" },
   "drink-soda": { name: "Boissons gazeuses", desc: "" },
-  "drink-iced-tea": { name: "Thé glacé (Citron/Pêche)", desc: "" },
   "drink-beer-na": { name: "Bière sans alcool", desc: "" },
   "drink-redbull": { name: "Red Bull", desc: "" },
 
@@ -418,7 +417,6 @@ const ITEMS_FR: ItemsTextPack = {
   "sandwich-tunacado": { name: "Sandwich Tunacado", desc: "Avocat, mousse de thon, pesto, tomate" },
   "sandwich-spicytuna": { name: "Sandwich Spicy Tuna", desc: "Mousse de thon, tomate, jalapeño, tabasco, pesto" },
   "sandwich-mozacado": { name: "Sandwich Mozacado", desc: "Mozzarella, avocat, tomate, pesto" },
-  "sandwich-toast-hollandais": { name: "Toast Hollandais", desc: "Tartine style hollandaise" },
   "sandwich-chicken-woods": { name: "Sandwich Chicken Woods", desc: "Poulet grillé, tomate, roquette, sauce maison" },
   "sandwich-chicken-parm": { name: "Sandwich Chicken Parm", desc: "Poulet grillé, aïoli, tomate, parmesan" },
 
@@ -689,8 +687,8 @@ const ITEMS_EN: ItemsTextPack = {
   "mojito-black": { name: "Black Mojito", desc: "" },
 
   // ——— Drinks (Iced Teas)
-  "icedtea-raspberry": { name: "Raspberry Iced Tea", desc: "Cold-brewed raspberry infusion" },
-  "icedtea-lemon": { name: "Lemon Iced Tea", desc: "Cold-brewed lemon infusion" },
+  "icedtea-raspberry": { name: "Raspberry Iced Tea", desc: "" },
+  "icedtea-lemon": { name: "Lemon Iced Tea", desc: "" },
 
   // ——— Drinks (Mocktails – Non-Alcoholic Cocktails)
   "mocktail-florida": { name: "Florida", desc: "" },
@@ -723,7 +721,6 @@ const ITEMS_EN: ItemsTextPack = {
   "drink-water-33cl": { name: "Mineral Water 33cl", desc: "" },
   "drink-water-50cl": { name: "Water 50cl", desc: "" },
   "drink-soda": { name: "Soft Drinks", desc: "" },
-  "drink-iced-tea": { name: "Iced Tea (Lemon/Peach)", desc: "" },
   "drink-beer-na": { name: "Non-Alcoholic Beer", desc: "" },
   "drink-redbull": { name: "Red Bull", desc: "" },
 
@@ -778,7 +775,6 @@ const ITEMS_EN: ItemsTextPack = {
   "sandwich-tunacado": { name: "Tunacado Sandwich", desc: "Avocado, tuna mousse, pesto, tomato" },
   "sandwich-spicytuna": { name: "Spicy Tuna Sandwich", desc: "Tuna mousse, tomato, jalapeño, tabasco, pesto" },
   "sandwich-mozacado": { name: "Mozacado Sandwich", desc: "Mozzarella, avocado, tomato, pesto" },
-  "sandwich-toast-hollandais": { name: "Dutch Toast", desc: "Hollandaise-style tartine" },
   "sandwich-chicken-woods": { name: "Chicken Woods Sandwich", desc: "Grilled chicken, tomato, arugula, house sauce" },
   "sandwich-chicken-parm": { name: "Chicken Parm Sandwich", desc: "Grilled chicken, aioli, tomato, parmesan" },
 
@@ -1003,52 +999,53 @@ const ITEMS_EN: ItemsTextPack = {
   "ice-1kg": { name: "1 kg of Ice Cream", desc: "" },
   "ice-tarte": { name: "Ice Cream Tart", desc: "" }
 };
-/** DUTCH culinary translations */
+
+/** DUTCH culinary translations — rewritten for natural modern café Dutch */
 const ITEMS_NL: ItemsTextPack = {
   // ——— Dranken (Matcha)
-  "matcha-latte": { name: "Matcha Latte / IJs", desc: "Matcha met melk (Warm/Koud)" },
-  "matcha-coco": { name: "Matcha Kokos", desc: "Kokoswater met matcha schuim" },
-  "matcha-pink-foam": { name: "Matcha Roze Schuim", desc: "Matcha met aardbeischuim" },
+  "matcha-latte": { name: "Matcha Latte / IJs", desc: "Matcha met melk (warm/koud)" },
+  "matcha-coco": { name: "Coco Matcha", desc: "Kokoswater met matcha foam" },
+  "matcha-pink-foam": { name: "Matcha Pink Foam", desc: "Matcha met aardbei foam" },
   "matcha-fraise": { name: "Matcha Aardbei", desc: "Matcha met aardbeipuree" },
   "matcha-mangue": { name: "Matcha Mango", desc: "Matcha met mangopuree" },
-  "milk-options": { name: "Melk Opties", desc: "Haver- of kokosmelk" },
+  "milk-options": { name: "Melkopties", desc: "Haver- of kokosmelk" },
 
   // ——— Koffie & Specialiteiten
-  "coffee-coco-latte": { name: "Kokos Latte", desc: "Kokoswater met koffieschuim" },
+  "coffee-coco-latte": { name: "Coco Latte", desc: "Kokoswater met koffieschuim" },
   "coffee-creme-brulee-latte": { name: "Crème Brûlée Latte", desc: "IJskoffie met crème brûlée" },
-  "coffee-spanish-latte": { name: "Spaanse Latte", desc: "Gecondenseerde melk met espresso shot" },
+  "coffee-spanish-latte": { name: "Spanish Latte", desc: "Gecondenseerde melk met espresso shot" },
   "coffee-saffron-latte": { name: "Saffraan Latte", desc: "Saffraan met kurkumamelk en espresso shot" },
-  "milk-options1": { name: "Melk Opties", desc: "Haver- of kokosmelk" },
+  "milk-options1": { name: "Melkopties", desc: "Haver- of kokosmelk" },
   
   // ——— Verfrissend
   "refresher-hibiscus": { name: "Hibiscus", desc: "Huisgebrouwen hibiscus" },
-  "refresher-hibiscus-peche": { name: "Hibiscus Perzik", desc: "Hibiscusthee met perzige afdronk" },
-  "refresher-tropical-ginger": { name: "Tropische Gember", desc: "Mango en gember in een pittige fusie" },
-  "refresher-watermelon-fizz": { name: "Watermeloen Fizz", desc: "Watermeloen gemengd met bruisende frisdrank" },
+  "refresher-hibiscus-peche": { name: "Hibiscus Perzik", desc: "Hibiscusthee met perzik" },
+  "refresher-tropical-ginger": { name: "Tropical Ginger", desc: "Mango en gember in een pittige mix" },
+  "refresher-watermelon-fizz": { name: "Watermelon Fizz", desc: "Watermeloen met bruisende frisdrank" },
 
   // ——— Smoothies
-  "smoothie-multivitamine": { name: "Multivitamine", desc: "Sinaasappel, ananas, kiwi en mango" },
-  "smoothie-california-dream": { name: "California Dream", desc: "Sinaasappel, aardbei, banaan, kiwi en yoghurt" },
-  "smoothie-jack-special": { name: "Jack's Special", desc: "Aardbei, ananas en citroen" },
-  "smoothie-coco-mango": { name: "Kokos Mango", desc: "Mango, banaan en kokosmelk" },
-  "smoothie-bananasa": { name: "Bananasa", desc: "Banaan, ananas, citroen en muntsiroop" },
+  "smoothie-multivitamine": { name: "Multivitamine", desc: "Sinaasappel, ananas, kiwi, mango" },
+  "smoothie-california-dream": { name: "California Dream", desc: "Sinaasappel, aardbei, banaan, kiwi, yoghurt" },
+  "smoothie-jack-special": { name: "Jack's Special", desc: "Aardbei, ananas, citroen" },
+  "smoothie-coco-mango": { name: "Coco Mango", desc: "Mango, banaan, kokosmelk" },
+  "smoothie-bananasa": { name: "Bananasa", desc: "Banaan, ananas, citroen, muntsiroop" },
 
   // ——— Romige Red Bull
-  "creamy-redbull-blueberry": { name: "Romige Red Bull Bosbes", desc: "Bosbes kokos met slagroom" },
-  "creamy-redbull-strawberry": { name: "Romige Red Bull Aardbei", desc: "Aardbei met slagroom" },
-  "creamy-redbull-peach": { name: "Romige Red Bull Perzik", desc: "Perzik met slagroom" },
+  "creamy-redbull-blueberry": { name: "Creamy Blueberry", desc: "Bosbes en kokos met slagroom" },
+  "creamy-redbull-strawberry": { name: "Creamy Strawberry", desc: "Aardbei met slagroom" },
+  "creamy-redbull-peach": { name: "Creamy Peach", desc: "Perzik met slagroom" },
 
   // ——— Mojito's (zonder alcohol)
-  "mojito-green": { name: "Groene Mojito", desc: "" },
-  "mojito-strawberry": { name: "Aardbei Mojito", desc: "" },
-  "mojito-passion": { name: "Passievrucht Mojito", desc: "" },
+  "mojito-green": { name: "Green Mojito", desc: "" },
+  "mojito-strawberry": { name: "Strawberry Mojito", desc: "" },
+  "mojito-passion": { name: "Passion Mojito", desc: "" },
   "mojito-redbull": { name: "Red Bull Mojito", desc: "" },
-  "mojito-strawberry-bull": { name: "Aardbei Bull Mojito", desc: "" },
-  "mojito-black": { name: "Zwarte Mojito", desc: "" },
+  "mojito-strawberry-bull": { name: "Strawberry Red Bull Mojito", desc: "" },
+  "mojito-black": { name: "Black Mojito", desc: "" },
 
   // ——— IJsthee
-  "icedtea-raspberry": { name: "Frambozen IJsthee", desc: "Koud gebrouwen frambozeninfusie" },
-  "icedtea-lemon": { name: "Citroen IJsthee", desc: "Koud gebrouwen citroeninfusie" },
+  "icedtea-raspberry": { name: "Frambozen IJsthee", desc: "" },
+  "icedtea-lemon": { name: "Citroen IJsthee", desc: "" },
 
   // ——— Mocktails
   "mocktail-florida": { name: "Florida", desc: "" },
@@ -1081,7 +1078,6 @@ const ITEMS_NL: ItemsTextPack = {
   "drink-water-33cl": { name: "Mineraalwater 33cl", desc: "" },
   "drink-water-50cl": { name: "Water 50cl", desc: "" },
   "drink-soda": { name: "Frisdranken", desc: "" },
-  "drink-iced-tea": { name: "IJsthee (Citroen/Perzik)", desc: "" },
   "drink-beer-na": { name: "Alcoholvrij Bier", desc: "" },
   "drink-redbull": { name: "Red Bull", desc: "" },
 
@@ -1101,7 +1097,7 @@ const ITEMS_NL: ItemsTextPack = {
   "hot-capp-italian": { name: "Italiaanse Cappuccino", desc: "Met melkschuim" },
   "hot-nespresso-creme": { name: "Nespresso Crème", desc: "" },
   "hot-nespresso-double": { name: "Dubbele Nespresso", desc: "" },
-  "hot-flavored": { name: "Gearomatiseerde Koffie", desc: "Karamel / Hazelnoot / Vanille" },
+  "hot-flavored": { name: "Gearomatiseerde Koffie", desc: "Karamel / hazelnoot / vanille" },
   "hot-cafe-creme": { name: "Koffie Crème", desc: "" },
   "hot-nescafe-lait": { name: "Nescafé met Melk", desc: "" },
   "hot-chocolate": { name: "Warme Chocolademelk", desc: "" },
@@ -1113,22 +1109,22 @@ const ITEMS_NL: ItemsTextPack = {
   "hot-bonbon": { name: "Café Bonbon", desc: "" },
 
   // ——— Ontbijt Formules
-  "breakfast-formule-espagnole": { name: "Spaans Ontbijt", desc: "2 eieren, broodmandje, tomatenpuree, manchego kaas, knoflookolie, warme drank, mini sinaasappelsap, mineraalwater" },
+  "breakfast-formule-espagnole": { name: "Spaans Ontbijt", desc: "2 eieren, broodmandje, tomatenpuree, manchego, knoflookolie, warme drank, mini sinaasappelsap, mineraalwater" },
   "breakfast-formule-marocaine": { name: "Marokkaans Ontbijt", desc: "Harcha, msemen, baghrir, tarwebrood, smeersels (boter, kaas, honing, amlou), warme drank, mini sinaasappelsap, mineraalwater" },
 
   // ——— Bowls
-  "bowl-original-yogurt": { name: "Originele Yoghurt Bowl", desc: "Yoghurt met granola, seizoensfruit en honing" },
-  "bowl-amlou-yogurt": { name: "Amlou Yoghurt Bowl", desc: "Yoghurt met granola, amlou, seizoensfruit en honing" },
-  "bowl-chia-pudding": { name: "Chia Pudding Bowl", desc: "Chiazaden met granola en seizoensfruit" },
+  "bowl-original-yogurt": { name: "Originele Yoghurt Bowl", desc: "Yoghurt, granola, seizoensfruit, honing" },
+  "bowl-amlou-yogurt": { name: "Amlou Yoghurt Bowl", desc: "Yoghurt, granola, amlou, fruit, honing" },
+  "bowl-chia-pudding": { name: "Chia Pudding Bowl", desc: "Chiazaden, granola, seizoensfruit" },
 
   // ——— Toasts
   "toast-avo-poached": { name: "Avocado & Gepocheerd Ei Toast", desc: "Avocado, gepocheerd ei, rucola" },
-  "toast-burrata": { name: "Burrata Toast", desc: "Burrata, kerstomaat, balsamico glazuur, walnoten" },
+  "toast-burrata": { name: "Burrata Toast", desc: "Burrata, cherrytomaat, balsamico, walnoten" },
   "toast-figtastic": { name: "Figtastic Toast", desc: "Brie, vijgen, honing, walnoten" },
   "toast-salmon": { name: "Gerookte Zalm Toast", desc: "Gerookte zalm, roomkaas, rucola, chilivlokken" },
 
   // ——— Brioche Broodjes
-  "bun-egg": { name: "Ei Brioche Broodje", desc: "Roerei, cheddar kaas" },
+  "bun-egg": { name: "Ei Brioche Broodje", desc: "Roerei, cheddar" },
   "bun-avo-herb": { name: "Avocado & Kruiden Brioche Broodje", desc: "Roerei, avocado, roomkaas, cheddar" },
   "bun-woods": { name: "Woods Brioche Broodje", desc: "Roerei, cheddar, gekarameliseerde ui" },
 
@@ -1136,7 +1132,6 @@ const ITEMS_NL: ItemsTextPack = {
   "sandwich-tunacado": { name: "Tunacado Sandwich", desc: "Avocado, tonijnmousse, pesto, tomaat" },
   "sandwich-spicytuna": { name: "Spicy Tuna Sandwich", desc: "Tonijnmousse, tomaat, jalapeño, tabasco, pesto" },
   "sandwich-mozacado": { name: "Mozacado Sandwich", desc: "Mozzarella, avocado, tomaat, pesto" },
-  "sandwich-toast-hollandais": { name: "Hollandse Toast", desc: "Hollandse stijl toast" },
   "sandwich-chicken-woods": { name: "Chicken Woods Sandwich", desc: "Gegrilde kip, tomaat, rucola, huisgemaakte saus" },
   "sandwich-chicken-parm": { name: "Chicken Parm Sandwich", desc: "Gegrilde kip, aioli, tomaat, Parmezaan" },
 
@@ -1144,7 +1139,7 @@ const ITEMS_NL: ItemsTextPack = {
   "egg-fried-1": { name: "1 Spiegelei", desc: "" },
   "egg-fried-2": { name: "2 Spiegeleieren", desc: "" },
   "egg-fried-3": { name: "3 Spiegeleieren", desc: "" },
-  "omelette-plain": { name: "Natuur Omelet", desc: "Eenvoudig en luchtig" },
+  "omelette-plain": { name: "Omelet Naturel", desc: "Eenvoudig en luchtig" },
   "omelette-cheese": { name: "Kaasomelet", desc: "Met gesmolten kaas" },
   "omelette-cheese-turkey": { name: "Kaas & Kalkoen Omelet", desc: "Met kaas en kalkoen" },
   "omelette-khlie": { name: "Khlie Omelet", desc: "Traditioneel Marokkaans gedroogd rundvlees" },
@@ -1153,22 +1148,22 @@ const ITEMS_NL: ItemsTextPack = {
 
   // ——— À la Carte
   "alacarte-chocolate-bread": { name: "Chocoladebroodje", desc: "Chocoladebroodje of croissant" },
-  "alacarte-turnover": { name: "Kaas- of Amandel Turnover", desc: "Bladerdeeg gevuld met kaas of amandelen" },
+  "alacarte-turnover": { name: "Kaas- of Amandel Turnover", desc: "Bladerdeeg met kaas of amandel" },
   "alacarte-bread-plate": { name: "Broodassortiment", desc: "Tarwebrood, harcha, msemen of baghrir met 2 smeersels (boter, roomkaas, jam, olijfolie, amlou, honing)" },
   "alacarte-cheese-toast": { name: "Kaas Toast", desc: "Geroosterd brood met gesmolten kaas" },
   "alacarte-turkey-cheese-toast": { name: "Kalkoen & Kaas Toast", desc: "Geroosterd brood met kalkoen en kaas" },
   "alacarte-croque-cheese": { name: "Croque Kaas", desc: "Klassieke kaas croque" },
   "alacarte-baghrir-amlou": { name: "Baghrir met Amlou", desc: "Marokkaanse griesmeelpannenkoekjes met amlou" },
-  "alacarte-croque-turkey-cheese": { name: "Croque Kalkoen & Kaas", desc: "Croque gevuld met kalkoen en kaas" },
-  "alacarte-khlie-eggs": { name: "Khlie met 2 Eieren", desc: "Traditioneel gedroogd rundvlees geserveerd met 2 eieren" },
+  "alacarte-croque-turkey-cheese": { name: "Croque Kalkoen & Kaas", desc: "Croque met kalkoen en kaas" },
+  "alacarte-khlie-eggs": { name: "Khlie met 2 Eieren", desc: "Traditioneel gedroogd rundvlees met 2 eieren" },
 
   // ——— Hollandse Toast Varianten
   "toast-amsterdam": { name: "Amsterdam Toast", desc: "Hollandse stijl toast" },
   "toast-rotterdam": { name: "Rotterdam Toast", desc: "Hollandse stijl toast" },
 
   // ——— Kinderformules
-  "kids-formula-1": { name: "Kinderformule I", desc: "Baghrir met amlou, mini chocoladepannenkoekjes, cornflakes, keuze uit koude chocolademelk of warme melk" },
-  "kids-formula-2": { name: "Kinderformule II", desc: "Chocoladepannenkoek, cornflakes, keuze uit koude chocolademelk of warme melk" },
+  "kids-formula-1": { name: "Kinderformule I", desc: "Baghrir met amlou, mini chocoladepannenkoekjes, cornflakes, koude chocolademelk of warme melk" },
+  "kids-formula-2": { name: "Kinderformule II", desc: "Chocoladepannenkoek, cornflakes, koude chocolademelk of warme melk" },
 
   // ——— Voorgerechten (Koud)
   "salade-marocaine": { name: "Marokkaanse Salade", desc: "" },
@@ -1233,7 +1228,7 @@ const ITEMS_NL: ItemsTextPack = {
   // ——— Pizza
   "pz-margherita": { name: "Margherita", desc: "Tomaat, mozzarella, zwarte olijven" },
   "pz-frutti": { name: "Frutti di Mare", desc: "Tomaat, mozzarella, inktvis, garnalen, surimi, mosselen, zwarte olijven" },
-  "pz-primavera": { name: "Primavera", desc: "Tomaat, mozzarella, aubergine, courgette, champignons, paprika, ui, kerstomaat" },
+  "pz-primavera": { name: "Primavera", desc: "Tomaat, mozzarella, aubergine, courgette, champignons, paprika, ui, cherrytomaat" },
   "pz-4formaggi": { name: "Quattro Formaggi", desc: "Tomaat, mozzarella, edam, blauwe kaas, Parmezaan" },
   "pz-prosciutto": { name: "Prosciutto", desc: "Tomaat, mozzarella, gerookte kalkoen" },
   "pz-diavola": { name: "Diavola", desc: "Tomaat, mozzarella, pepperoni, zwarte olijven" },
@@ -1267,15 +1262,15 @@ const ITEMS_NL: ItemsTextPack = {
   "jalapenos-bites-9": { name: "Jalapeño Bites (9 stuks)", desc: "" },
 
   // ——— Burgers
-  "burger-chicken": { name: "Kipburger", desc: "Kipburger, cheddar kaas, sla, tomaat" },
+  "burger-chicken": { name: "Kipburger", desc: "Kipburger, cheddar, sla, tomaat" },
   "burger-cheese": { name: "Cheeseburger", desc: "Rundvleesburger, sla, tomaat" },
-  "burger-double-cheese": { name: "Double Cheeseburger", desc: "Dubbele rundvlees, dubbele cheddar, sla, tomaat" },
+  "burger-double-cheese": { name: "Double Cheeseburger", desc: "Dubbel rundvlees, dubbele cheddar, sla, tomaat" },
   "burger-american": { name: "American Burger", desc: "Rundvleesburger, ei, cheddar, sla, tomaat" },
   "burger-cheese-jalapenos": { name: "Cheese Jalapeños Burger", desc: "Rundvleesburger, sla, tomaat, ui, chipotle mayo" },
   "burger-chicken-ananas": { name: "Ananas Kipburger", desc: "Gegrilde kip, sla, tomaat, ui, champignons, ananas" },
 
   // ——— Hartige Crêpes
-  "crepe-fromage": { name: "Kaas Crêpe", desc: "Kaas met bechamelsaus" },
+  "crepe-fromage": { name: "Kaas Crêpe", desc: "Kaas met bechamel" },
   "crepe-thon": { name: "Tonijn Crêpe", desc: "Tonijn, kaas, oregano, tomatensaus" },
   "crepe-dinde-fromage": { name: "Kalkoen & Kaas Crêpe", desc: "Gerookte kalkoen, kaas, ei, bechamel" },
   "crepe-poulet-champignons": { name: "Kip & Champignons Crêpe", desc: "Kip, kaas, champignons, bechamel" },
@@ -1353,14 +1348,17 @@ const ITEMS_NL: ItemsTextPack = {
 
   // ——— Bouw Je Eigen IJs
   "ice-chantilly": { name: "Slagroom", desc: "" },
-  "ice-1-boule": { name: "1 Bol Ijs", desc: "" },
-  "ice-2-boules": { name: "2 Bollen Ijs", desc: "" },
-  "ice-3-boules": { name: "3 Bollen Ijs", desc: "" },
-  "ice-4-boules": { name: "4 Bollen Ijs", desc: "" },
-  "ice-500g": { name: "½ kg Ijs", desc: "" },
-  "ice-1kg": { name: "1 kg Ijs", desc: "" },
+  "ice-1-boule": { name: "1 Bol IJs", desc: "" },
+  "ice-2-boules": { name: "2 Bollen IJs", desc: "" },
+  "ice-3-boules": { name: "3 Bollen IJs", desc: "" },
+  "ice-4-boules": { name: "4 Bollen IJs", desc: "" },
+  "ice-500g": { name: "½ kg IJs", desc: "" },
+  "ice-1kg": { name: "1 kg IJs", desc: "" },
   "ice-tarte": { name: "Ijstaart", desc: "" }
 };
+
+export default ITEMS_NL;
+
 /* ============================================================================
    5) Language registry (category/sub labels + item maps)
    ========================================================================== */
@@ -1462,7 +1460,6 @@ export const MENU_ITEMS: MenuItem[] = [
     { id: "drink-water-33cl", price: 8, category: "drinks", subcategory: "Boissons Fraîches" },
     { id: "drink-water-50cl", price: 12, category: "drinks", subcategory: "Boissons Fraîches" },
     { id: "drink-soda", price: 22, category: "drinks", subcategory: "Boissons Fraîches" },
-    { id: "drink-iced-tea", price: 28, category: "drinks", subcategory: "Boissons Fraîches" },
     { id: "drink-beer-na", price: 35, category: "drinks", subcategory: "Boissons Fraîches" },
     { id: "drink-redbull", price: 35, category: "drinks", subcategory: "Boissons Fraîches" },
   
@@ -1885,13 +1882,7 @@ export default function WoodsSite() {
 
   return (
     <div className="min-h-screen bg-clay/60 text-neutral-100">
-      <div
-        className="pointer-events-none fixed inset-0 bg-cover bg-center opacity-10"
-        style={{
-          backgroundImage:
-            "url('https://plus.unsplash.com/premium_photo-1675695700222-9f4cb0c4a158?q=80&w=1288&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
-        }}
-      />
+   
 
       {/* Header */}
       <header className="sticky top-0 z-40 backdrop-blur-lg bg-clay border-b border-white/10">

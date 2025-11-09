@@ -1,12 +1,10 @@
-
 // app/layout.tsx
 import "./globals.css";
-
 import type { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
   title: "WOODS",
-  description: "Modern multilingual QR menu",
+  description: "WOODS Menu",
 };
 
 export const viewport: Viewport = {
@@ -15,12 +13,17 @@ export const viewport: Viewport = {
   userScalable: false,
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.png" type="image/png" />
+      </head>
       <body>{children}</body>
     </html>
   );
 }
-
-
