@@ -1676,16 +1676,6 @@ const ITEMS_NL: ItemsTextPack = {
 
 };
 
-/* ============================================================================
-   5) Language registry (category/sub labels + item maps)
-   ========================================================================== */
-const LANGS: Record<LangKey, {
-  ui: typeof UI["fr"];
-  categories: Record<CategoryId, string>;
-  subcats: Record<string, string>;
-  items: ItemsTextPack;
-}> = {
-
 /** SPANISH culinary translations */
 const ITEMS_ES: ItemsTextPack = {
   "matcha-latte": { name: "Matcha Latte", desc: "Matcha con leche (caliente/con hielo)" },
@@ -2225,6 +2215,16 @@ const ITEMS_ZH: ItemsTextPack = {
   "ice-4-boules": { name: "4球冰淇淋", desc: "" },
   "ice-5-boules": { name: "5球冰淇淋", desc: "" },
 };
+
+/* ============================================================================
+   5) Language registry (category/sub labels + item maps)
+   ========================================================================== */
+const LANGS: Record<LangKey, {
+  ui: typeof UI["fr"];
+  categories: Record<CategoryId, string>;
+  subcats: Record<string, string>;
+  items: ItemsTextPack;
+}> = {
 
   fr: { ui: UI.fr, categories: CAT_LABELS.fr, subcats: SUB_LABELS.fr, items: ITEMS_FR },
   en: { ui: UI.en, categories: CAT_LABELS.en, subcats: SUB_LABELS.en, items: ITEMS_EN },
