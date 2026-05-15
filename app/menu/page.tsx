@@ -2694,7 +2694,7 @@ export default function WoodsSite() {
   // --- safe local helpers to avoid undefined refs ---
   function heroFromItems(items: MenuItem[] = []) {
     // pick first item.image if present, else a neutral placeholder
-    const img = items.find((i) => (i as any).image)?.image as string | undefined;
+    const img = items.find((i) => i.image)?.image;
     return img || "";
   }
   function heroForCategory(cat: CategoryId, items: MenuItem[] = []) {
@@ -3373,7 +3373,7 @@ function DrawerLink({
   label,
   onClick,
 }: {
-  icon: any;
+  icon: React.ComponentType<{ className?: string }>;
   label: string;
   onClick?: () => void;
 }) {
