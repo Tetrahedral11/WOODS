@@ -217,7 +217,7 @@ export type MenuItem = {
 /* ============================================================================
    2) Language meta + UI strings (brand, actions, headers)
    ========================================================================== */
-const UI: Record<LangKey, { rtl?: boolean; brand: string; chooseLanguage: string; about: string; menu: string; gallery: string; search: string; storyTitle: string; story: string; all: string; itemsCount: (n: number) => string; priceMAD: (v: number) => string; }> = {
+const UI: Record<LangKey, { rtl?: boolean; brand: string; chooseLanguage: string; about: string; menu: string; gallery: string; search: string; storyTitle: string; story: string; all: string; itemsCount: (n: number) => string; priceMAD: (v: number) => string; clearSearch?: string; }> = {
   fr: {
     brand: "WOODS",
     chooseLanguage: "Choisissez votre langue",
@@ -247,6 +247,15 @@ const UI: Record<LangKey, { rtl?: boolean; brand: string; chooseLanguage: string
   nl: {
     brand: "WOODS",
     chooseLanguage: "Kies je taal",
+    about: "Over ons",
+    menu: "Onze kaart",
+    gallery: "Galerij",
+    search: "Zoek gerechten of ingrediënten…",
+    storyTitle: "Ons verhaal",
+    story: "Bij WOODS combineren we Marokkaanse warmte met moderne ambacht. Seizoensgebonden en lokaal, met respect bereid.",
+    all: "Alles",
+    itemsCount: (n) => `${n}`,
+    priceMAD: (v) => `${v} MAD`,
   },
 
   es: {
@@ -273,15 +282,6 @@ const UI: Record<LangKey, { rtl?: boolean; brand: string; chooseLanguage: string
     storyTitle: "我们的故事",
     story: "在WOODS，我们将摩洛哥的温暖与现代创意相融合。采用应季、本地食材，精心烹制。",
     all: "全部",
-    itemsCount: (n) => `${n}`,
-    priceMAD: (v) => `${v} MAD`,
-    about: "Over ons",
-    menu: "Onze kaart",
-    gallery: "Galerij",
-    search: "Zoek gerechten of ingrediënten…",
-    storyTitle: "Ons verhaal",
-    story: "Bij WOODS combineren we Marokkaanse warmte met moderne ambacht. Seizoensgebonden en lokaal, met respect bereid.",
-    all: "Alles",
     itemsCount: (n) => `${n}`,
     priceMAD: (v) => `${v} MAD`,
   },
